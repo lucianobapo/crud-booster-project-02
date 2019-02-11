@@ -20,6 +20,7 @@ class CreateCostCenters extends Migration
 
             $table->timestamps();
             $table->softDeletes();
+            $table->integer('owner_id')->nullable()->index();
 
             $table->string('name');
         });

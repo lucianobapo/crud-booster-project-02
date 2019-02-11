@@ -18,6 +18,8 @@ class CreateProducts extends Migration
             $table->uuid('id');
             $table->increments('cod')->index();
 
+            $table->integer('owner_id')->nullable()->index();
+
             $table->timestamps();
             $table->softDeletes();
             $table->string('name');

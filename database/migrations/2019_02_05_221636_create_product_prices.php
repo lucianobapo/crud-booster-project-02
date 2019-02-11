@@ -17,7 +17,8 @@ class CreateProductPrices extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->softDeletes();
-            $table->uuid('product_id')->nullable();
+            $table->uuid('product_id')->nullable()->index();
+            $table->integer('owner_id')->nullable()->index();
 
             $table->double('price')->nullable();
             $table->date('valid_from')->nullable();

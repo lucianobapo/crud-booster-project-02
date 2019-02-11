@@ -248,7 +248,8 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
-	            
+            $me = CRUDBooster::me();
+            if(!empty($me->owner_id)) $query->where($this->table.'.owner_id',$me->owner_id);
 	    }
 
 	    /*
@@ -270,6 +271,8 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
+            $me = CRUDBooster::me();
+            if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
             $postdata[$this->primary_key] = Uuid::uuid4();
 	    }
 

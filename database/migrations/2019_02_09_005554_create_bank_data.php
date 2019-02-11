@@ -17,7 +17,8 @@ class CreateBankData extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->softDeletes();
-            $table->uuid('partner_id')->nullable();
+            $table->uuid('partner_id')->nullable()->index();
+            $table->integer('owner_id')->nullable()->index();
 
             $table->string('agency_number');
             $table->string('account_number');

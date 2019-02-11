@@ -1,10 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-	use Ramsey\Uuid\Uuid;
+	use crocodicstudio\crudbooster\helpers\CRUDBooster;
+    use Ramsey\Uuid\Uuid;
     use Session;
 	use Request;
 	use DB;
-	use CRUDBooster;
 
 	class AdminPartners14Controller extends \crocodicstudio\crudbooster\controllers\CBController {
 
@@ -347,7 +347,8 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
-	            
+            $me = CRUDBooster::me();
+            if(!empty($me->owner_id)) $query->where('partners.owner_id',$me->owner_id);
 	    }
 
 	    /*
@@ -369,6 +370,8 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
+            $me = CRUDBooster::me();
+            if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
             $postdata[$this->primary_key] = Uuid::uuid4();
 
 	    }

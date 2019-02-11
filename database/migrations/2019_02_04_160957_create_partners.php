@@ -17,12 +17,13 @@ class CreatePartners extends Migration
 //            $table->increments('id');
             $table->uuid('id');
             $table->increments('cod')->index();
+            $table->integer('owner_id')->nullable()->index();
 
             $table->timestamps();
             $table->softDeletes();
             $table->string('name');
-            $table->integer('partner_type_id')->nullable();
-            $table->uuid('cost_center_id')->nullable();
+            $table->integer('partner_type_id')->nullable()->index();
+            $table->uuid('cost_center_id')->nullable()->index();
         });
         Schema::table('partners', function (Blueprint $table) {
             $table->dropPrimary('partners_cod_primary');

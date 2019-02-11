@@ -17,9 +17,10 @@ class CreateAddresses extends Migration
             $table->increments('id');
             $table->timestamps();
             $table->softDeletes();
-            $table->uuid('partner_id')->nullable();
+            $table->uuid('partner_id')->nullable()->index();
+            $table->integer('owner_id')->nullable()->index();
 
-            $table->integer('address_type_id')->nullable();
+            $table->integer('address_type_id')->nullable()->index();
 
 //            $table->boolean('default');
             $table->string('street');

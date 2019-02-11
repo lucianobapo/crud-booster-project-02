@@ -1,9 +1,9 @@
 <?php namespace App\Http\Controllers;
 
-	use Session;
+	use crocodicstudio\crudbooster\helpers\CRUDBooster;
+    use Session;
 	use Request;
 	use DB;
-	use CRUDBooster;
 
 	class AdminAddressesController extends \crocodicstudio\crudbooster\controllers\CBController {
 
@@ -245,7 +245,9 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
-	            
+            $me = CRUDBooster::me();
+            if(!empty($me->owner_id)) $query->where('addresses.owner_id',$me->owner_id);
+
 	    }
 
 	    /*
@@ -267,7 +269,8 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
-
+            $me = CRUDBooster::me();
+            if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
 	    }
 
 	    /* 

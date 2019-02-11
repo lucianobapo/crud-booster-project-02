@@ -18,8 +18,9 @@ class CreateContacts extends Migration
             $table->timestamps();
             $table->softDeletes();
             $table->string('contact')->nullable();
-            $table->uuid('partner_id')->nullable();
-            $table->integer('contact_type_id')->nullable();
+            $table->uuid('partner_id')->nullable()->index();
+            $table->integer('owner_id')->nullable()->index();
+            $table->integer('contact_type_id')->nullable()->index();
         });
     }
 

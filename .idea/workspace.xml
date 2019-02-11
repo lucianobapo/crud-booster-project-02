@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="" />
+    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminBankDataController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminBankDataController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminCmsUsersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminCmsUsersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminDatesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminDatesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminDocumentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminDocumentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminProductPricesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminProductPricesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_04_160957_create_partners.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_04_160957_create_partners.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_04_194836_create_documents.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_04_194836_create_documents.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_04_211434_create_contacts.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_04_211434_create_contacts.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_05_002519_create_addresses.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_05_002519_create_addresses.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_05_214527_create_products.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_05_214527_create_products.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_05_214715_create_product_codes.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_05_214715_create_product_codes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_05_221636_create_product_prices.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_05_221636_create_product_prices.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_07_134330_create_dates.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_07_134330_create_dates.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_08_215441_create_cost_centers.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_08_215441_create_cost_centers.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2019_02_09_005554_create_bank_data.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2019_02_09_005554_create_bank_data.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,51 +34,7 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="99" column="165" selection-start-line="99" selection-start-column="165" selection-end-line="99" selection-end-column="165" />
-              <folding>
-                <element signature="e#40#61#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_160957_create_partners.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="1209" column="46" selection-start-line="1209" selection-start-column="46" selection-end-line="1209" selection-end-column="46" />
-              <folding>
-                <element signature="e#94#101#0#PHP" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -79,15 +57,16 @@
       <find>Add</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_04_162036_create_partner_types.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/resources/lang/pt_br.json" />
         <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/admin_template.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminCmsUsersController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_04_201212_create_document_types.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_04_211331_create_contact_types.php" />
@@ -102,29 +81,34 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_02_09_005909_create_banks.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_09_010042_create_account_types.php" />
         <option value="$PROJECT_DIR$/resources/lang/pt_br/crudbooster.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_214715_create_product_codes.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_221636_create_product_prices.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_214527_create_products.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_08_215441_create_cost_centers.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminDatesController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_07_134330_create_dates.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_04_194836_create_documents.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminDocumentsController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_04_211434_create_contacts.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_09_005554_create_bank_data.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminBankDataController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_10_174555_create_address_types.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_002519_create_addresses.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-11.log" />
         <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_04_160957_create_partners.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_11_182717_create_owners.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminCmsUsersController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_11_183314_add_owner_to_user.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminBankDataController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminDatesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminDocumentsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductPricesController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_214527_create_products.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_08_215441_create_cost_centers.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_09_005554_create_bank_data.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_07_134330_create_dates.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_221636_create_product_prices.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_04_211434_create_contacts.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_002519_create_addresses.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_05_214715_create_product_codes.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_04_194836_create_documents.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2019_02_04_160957_create_partners.php" />
       </list>
     </option>
   </component>
@@ -243,12 +227,13 @@
       <path value="$PROJECT_DIR$/vendor/imanghafoori/laravel-heyman" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="45" />
     <option name="y" value="27" />
     <option name="width" value="1235" />
     <option name="height" value="693" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -265,6 +250,41 @@
               <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
               <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
+              <item name="database" type="462c0819:PsiDirectoryNode" />
+              <item name="migrations" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
+              <item name="logs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -321,18 +341,18 @@
       <workItem from="1549404668750" duration="5031000" />
       <workItem from="1549538093652" duration="1553000" />
       <workItem from="1549576092445" duration="35349000" />
-      <workItem from="1549843576897" duration="2896000" />
+      <workItem from="1549843576897" duration="17534000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68251000" />
+    <option name="totallyTimeSpent" value="82889000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1241" height="693" extended-state="6" />
+    <frame x="0" y="27" width="1241" height="693" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25606695" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.2497876" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4990099" visible="true" weight="0.31966528" />
+      <window_info id="Structure" order="1" sideWeight="0.5019763" side_tool="true" weight="0.31966528" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -343,10 +363,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.069767445" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.2639138" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -378,47 +398,33 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-07.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="195">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_201212_create_document_types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="35" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPriceTypesController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDateTypesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="37" column="113" selection-start-line="37" selection-start-column="29" selection-end-line="37" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/default/type_components/date/asset.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/default/type_components/date/component_detail.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/default/type_components/date/component.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="18" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/vendor/crudbooster/type_components/readme.txt">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/crudbooster/type_components/child/component.blade.php" />
     <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -464,13 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_09_005909_create_banks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-765" />
@@ -490,145 +489,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_214945_create_code_types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductPricesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1860">
-          <caret line="41" column="187" selection-start-line="41" selection-start-column="29" selection-end-line="41" selection-end-column="187" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_08_141110_create_date_types.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="19" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/lang/pt_br/crudbooster.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="96" column="29" selection-start-line="96" selection-start-column="29" selection-end-line="96" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_221636_create_product_prices.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="51" column="26" lean-forward="true" selection-start-line="51" selection-end-line="52" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="40" column="100" lean-forward="true" selection-start-line="40" selection-start-column="100" selection-end-line="40" selection-end-column="100" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_08_215441_create_cost_centers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="27" column="45" selection-start-line="27" selection-start-column="45" selection-end-line="27" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_214527_create_products.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="256" column="44" selection-start-line="256" selection-start-column="44" selection-end-line="256" selection-end-column="44" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_07_134330_create_dates.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDatesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDocumentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="40" column="111" selection-start-line="40" selection-start-column="111" selection-end-line="40" selection-end-column="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_194836_create_documents.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="21" column="12" lean-forward="true" selection-start-line="21" selection-start-column="12" selection-end-line="21" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_211434_create_contacts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="40" column="113" selection-start-line="40" selection-start-column="113" selection-end-line="40" selection-end-column="113" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="40" column="107" selection-start-line="40" selection-start-column="107" selection-end-line="40" selection-end-column="107" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_09_005554_create_bank_data.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="22" column="44" selection-start-line="22" selection-start-column="44" selection-end-line="22" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminBankDataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="41" column="107" selection-start-line="41" selection-start-column="107" selection-end-line="41" selection-end-column="107" />
         </state>
       </provider>
     </entry>
@@ -646,50 +510,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_002519_create_addresses.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="25" column="27" lean-forward="true" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_214715_create_product_codes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="23" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_162036_create_partner_types.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_160957_create_partners.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="99" column="165" selection-start-line="99" selection-start-column="165" selection-end-line="99" selection-end-column="165" />
-          <folding>
-            <element signature="e#40#61#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-11.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -698,6 +518,254 @@
             <element signature="e#94#101#0#PHP" expanded="true" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="50">
+          <caret line="499" column="84" selection-start-line="499" selection-start-column="84" selection-end-line="499" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminCmsUsersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="35" column="64" selection-start-line="35" selection-start-column="56" selection-end-line="35" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_09_005909_create_banks.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="33" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_10_01_141846_add_parameters_apicustom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="29" column="12" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_08_17_225409_add_status_cms_users.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_08_141110_create_date_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="19" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_214945_create_code_types.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="45" lean-forward="true" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_162036_create_partner_types.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/helpers/CRUDBooster.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="211" column="27" selection-start-line="211" selection-start-column="27" selection-end-line="211" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="248" column="88" selection-start-line="247" selection-start-column="12" selection-end-line="248" selection-end-column="88" />
+          <folding>
+            <element signature="e#40#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-11.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="214">
+          <caret line="425" lean-forward="true" selection-start-line="425" selection-end-line="425" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="260" column="76" selection-start-line="260" selection-start-column="76" selection-end-line="260" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="235" column="92" selection-start-line="235" selection-start-column="92" selection-end-line="235" selection-end-column="92" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDatesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="260" column="76" selection-start-line="260" selection-start-column="76" selection-end-line="260" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminDocumentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="237" column="92" selection-start-line="237" selection-start-column="92" selection-end-line="237" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="372" column="12" selection-start-line="372" selection-start-column="12" selection-end-line="373" selection-end-column="76" />
+          <folding>
+            <element signature="e#40#91#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="260" column="76" selection-start-line="260" selection-start-column="76" selection-end-line="260" selection-end-column="76" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductPricesController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="237" column="92" selection-start-line="237" selection-start-column="92" selection-end-line="237" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="274" column="76" selection-start-line="274" selection-start-column="76" selection-end-line="274" selection-end-column="76" />
+          <folding>
+            <element signature="e#40#61#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminBankDataController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="265" column="12" selection-start-line="265" selection-start-column="12" selection-end-line="266" selection-end-column="76" />
+          <folding>
+            <element signature="e#40#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_11_182717_create_owners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="34" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_11_183314_add_owner_to_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="17" column="52" lean-forward="true" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_09_005554_create_bank_data.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_08_215441_create_cost_centers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="22" column="60" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_07_134330_create_dates.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_221636_create_product_prices.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_214527_create_products.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="20" column="60" selection-start-line="20" selection-start-column="60" selection-end-line="20" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_002519_create_addresses.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_05_214715_create_product_codes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="24" column="64" selection-start-line="24" selection-start-column="64" selection-end-line="24" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_211434_create_contacts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="22" column="67" selection-start-line="22" selection-start-column="67" selection-end-line="22" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_194836_create_documents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="23" column="68" selection-start-line="23" selection-start-column="68" selection-end-line="23" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_04_160957_create_partners.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
         </state>
       </provider>
     </entry>

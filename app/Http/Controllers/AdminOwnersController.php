@@ -5,7 +5,7 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminContactsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminOwnersController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
 
@@ -25,28 +25,22 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "contacts";
+			$this->table = "owners";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-            $this->col[] = ["label"=>"Nome","name"=>"partner_id","join"=>"partners,name"];
-			$this->col[] = ["label"=>"Contato","name"=>"contact"];
-			$this->col[] = ["label"=>"Tipo de Contato","name"=>"contact_type_id","join"=>"contact_types,type"];
+			$this->col[] = ["label"=>"Mandante","name"=>"owner"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Contato','name'=>'contact','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Partner Id','name'=>'partner_id','type'=>'select2','validation'=>'required','width'=>'col-sm-10','datatable'=>'partners,name'];
-			$this->form[] = ['label'=>'Tipo de Contato','name'=>'contact_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'contact_types,type'];
+			$this->form[] = ['label'=>'Mandante','name'=>'owner','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Contato','name'=>'contact','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
-			//$this->form[] = ['label'=>'Partner Id','name'=>'partner_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'partner,name'];
-			//$this->form[] = ['label'=>'Tipo de Contato','name'=>'contact_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'contact_type,type'];
+			//$this->form[] = ["label"=>"Owner","name"=>"owner","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 
@@ -234,8 +228,7 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $query->where($this->table.'.owner_id',$me->owner_id);
+	            
 	    }
 
 	    /*
@@ -257,8 +250,7 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
+
 	    }
 
 	    /* 
