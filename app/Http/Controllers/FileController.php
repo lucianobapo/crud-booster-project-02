@@ -12,7 +12,6 @@ class FileController extends Controller
 {
     public function getPreview($one, $two = null, $three = null, $four = null, $five = null)
     {
-        dd('acessando');
         $module = CRUDBooster::getCurrentModule();
 
         if (! CRUDBooster::isView() && $this->global_privilege == false) {
