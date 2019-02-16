@@ -165,7 +165,7 @@ class SocialiteController extends Controller
             if($existingUser){
                 // log them in
                 $this->userLogin($existingUser);
-            } else $this->errorLogin();
+            } else $this->errorLogin($response_data->id);
 
         }else $this->errorLogin($contents);
 
