@@ -167,15 +167,15 @@ class SocialiteController extends Controller
                 $this->userLogin($existingUser);
             } else $this->errorLogin();
 
-        }else $this->errorLogin();
+        }else $this->errorLogin($contents);
 
     }
 
-    private function errorLogin()
+    private function errorLogin($message)
     {
         $module = CRUDBooster::getCurrentModule();
 
-        CRUDBooster::insertLog('Login Error', ['module' => $module->name]);
+        CRUDBooster::insertLog('Login Error: '.$message, ['module' => $module->name]);
         CRUDBooster::redirect(CRUDBooster::adminPath(), trans('crudbooster.denied_access'));
     }
 }
