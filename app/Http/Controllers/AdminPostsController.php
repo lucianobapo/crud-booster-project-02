@@ -1,6 +1,7 @@
 <?php namespace App\Http\Controllers;
 
-	use Session;
+	use Ramsey\Uuid\Uuid;
+    use Session;
 	use Request;
 	use DB;
 	use CRUDBooster;
