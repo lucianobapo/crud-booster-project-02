@@ -138,7 +138,7 @@ class SocialiteController extends Controller
         $token = md5(env('API_SECRET_KEY') . time(). $user_agent);
 
 
-        $response = $client->post(url('app/add_user'),
+        $response = $client->post(url('api/add_user'),
             [
                 'form_params'=>[
                     'name'=>$user->name,
