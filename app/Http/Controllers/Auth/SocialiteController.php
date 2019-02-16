@@ -69,6 +69,7 @@ class SocialiteController extends Controller
      */
     public function handleProviderCallback($provider)
     {
+
         $module = CRUDBooster::getCurrentModule();
 
         if(!array_key_exists($provider, config('services'))){
@@ -137,7 +138,7 @@ class SocialiteController extends Controller
         $token = md5(env('API_SECRET_KEY') . time(). $user_agent);
 
 
-        $response = $client->post('http://crudbooster.localhost.com/api/add_user',
+        $response = $client->post(url('app/add_user'),
             [
                 'form_params'=>[
                     'name'=>$user->name,
