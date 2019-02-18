@@ -3,42 +3,46 @@
 use App\Helpers\VideoStream;
 use crocodicstudio\crudbooster\helpers\CRUDBooster;
 use File;
+use Session;
 use Image;
 use Request;
 use Response;
 use Storage;
+use DB;
 
 class FileController extends Controller
 {
-    public function getPreview($one, $two = null, $three = null, $four = null, $five = null)
+
+    private $basic_dir = 'attachments';
+
+    public function getPreview($one, $two = null, $three = null, $four = null, $five = null, \Illuminate\Http\Request $request)
     {
-        $module = CRUDBooster::getCurrentModule();
 
-        if (! CRUDBooster::isView() && $this->global_privilege == false) {
-            CRUDBooster::insertLog(trans('crudbooster.log_try_view', ['module' => $module->name]));
-            CRUDBooster::redirect(CRUDBooster::adminPath(), trans('crudbooster.denied_access'));
-        }
-
-        $basic_dir = 'attachments';
         if ($two) {
-            $fullFilePath = $basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two;
+            $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two;
             $filename = $two;
             if ($three) {
-                $fullFilePath = $basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two.DIRECTORY_SEPARATOR.$three;
+                $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two.DIRECTORY_SEPARATOR.$three;
                 $filename = $three;
                 if ($four) {
-                    $fullFilePath = $basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two.DIRECTORY_SEPARATOR.$three.DIRECTORY_SEPARATOR.$four;
+                    $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two.DIRECTORY_SEPARATOR.$three.DIRECTORY_SEPARATOR.$four;
                     $filename = $four;
                     if ($five) {
-                        $fullFilePath = $basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two.DIRECTORY_SEPARATOR.$three.DIRECTORY_SEPARATOR.$four.DIRECTORY_SEPARATOR.$five;
+                        $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two.DIRECTORY_SEPARATOR.$three.DIRECTORY_SEPARATOR.$four.DIRECTORY_SEPARATOR.$five;
                         $filename = $five;
                     }
                 }
             }
         } else {
-            $fullFilePath = $basic_dir.DIRECTORY_SEPARATOR.$one;
+            $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one;
             $filename = $one;
         }
+
+
+        if ($this->getFileData($fullFilePath)->check_referer)
+            $this->checkReferer($request, $fullFilePath);
+        if ($this->getFileData($fullFilePath)->check_permissions)
+            $this->checkPermissions($fullFilePath);
 
         $fullStoragePath = storage_path('app/'.$fullFilePath);
         $lifetime = 31556926; // One year in seconds
@@ -46,8 +50,10 @@ class FileController extends Controller
         $handler = new \Symfony\Component\HttpFoundation\File\File(storage_path('app/'.$fullFilePath));
 
         if (! Storage::exists($fullFilePath)) {
+            CRUDBooster::insertLog('File not Found: '.$fullFilePath);
             abort(404);
         }
+
 
         $extension = strtolower(File::extension($fullStoragePath));
         $images_ext = config('crudbooster.IMAGE_EXTENSIONS', 'jpg,png,gif,bmp');
@@ -112,8 +118,6 @@ class FileController extends Controller
         ]);
 
 
-
-
         if (in_array($extension, $images_ext)) {
             if ($h1 || $h2) {
                 return Response::make('', 304, $headers); // File (image) is cached by the browser, so we don't have to send it again
@@ -135,5 +139,56 @@ class FileController extends Controller
                 return Response::file(storage_path('app/'.$fullFilePath), $headers);
             }
         }
+    }
+
+    private function isView()
+    {
+        $session = Session::get('admin_privileges_roles');
+        if(!empty($session))
+            foreach ($session as $v) {
+                if ($v->path == $this->basic_dir) {
+                    return (bool) $v->is_visible;
+                }
+            }
+        return false;
+    }
+
+    private function checkPermissions($fullFilePath)
+    {
+        if (! $this->isView() && $this->global_privilege == false) {
+            CRUDBooster::insertLog(trans('crudbooster.log_try_view', ['module' => $this->basic_dir]));
+            CRUDBooster::redirect(CRUDBooster::adminPath(), trans('crudbooster.denied_access'));
+        }
+
+        $privilege_id = $this->getFileData($fullFilePath)->cms_privilege_id;
+
+        if($privilege_id != CRUDBooster::myPrivilegeId()){
+            CRUDBooster::insertLog(trans('crudbooster.log_try_view', ['module' => $this->basic_dir]));
+            CRUDBooster::redirect(CRUDBooster::adminPath(), trans('crudbooster.denied_access'));
+        }
+    }
+
+    private function checkReferer(\Illuminate\Http\Request $request, string $fullFilePath)
+    {
+        if (strpos($request->header('referer'),$request->getHttpHost())===false) {
+            CRUDBooster::insertLog('Referer error: '.
+                $request->header('referer').' ::: '.
+                $request->getHttpHost().' ::: '.
+                $fullFilePath);
+            abort(403);
+        }
+    }
+
+    private function getFileData($fullFilePath)
+    {
+        $data = DB::table($this->basic_dir)
+            ->where('file', $fullFilePath)
+            ->first();
+        if(empty($data)){
+            CRUDBooster::insertLog('File not Found on Database: '.$fullFilePath);
+            abort(404);
+        }
+
+        return $data;
     }
 }

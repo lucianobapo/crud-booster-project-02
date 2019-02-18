@@ -17,11 +17,14 @@ class CreateAttachments extends Migration
 //            $table->increments('id');
             $table->uuid('id');
             $table->integer('owner_id')->nullable()->index();
+            $table->integer('cms_privilege_id')->nullable()->index();
 
             $table->timestamps();
             $table->softDeletes();
 
-            $table->string('file');
+            $table->boolean('check_referer')->nullable()->index();
+            $table->boolean('check_permissions')->nullable()->index();
+            $table->string('file')->index();
         });
 
 

@@ -73,7 +73,7 @@ class SocialiteController extends Controller
         $module = CRUDBooster::getCurrentModule();
 
         if(!array_key_exists($provider, config('services'))){
-            CRUDBooster::insertLog('Provider Error', ['module' => $module->name]);
+            CRUDBooster::insertLog('Provider Not Configured: '.$provider, ['module' => $module->name]);
             CRUDBooster::redirect(CRUDBooster::adminPath(), trans('crudbooster.denied_access'));
         }
 
@@ -82,7 +82,7 @@ class SocialiteController extends Controller
         }
         catch (\Exception $e) {
             $module = CRUDBooster::getCurrentModule();
-            CRUDBooster::insertLog('Provider Error', ['module' => $module->name]);
+            CRUDBooster::insertLog('Provider Error: '.$e->getMessage(), ['module' => $module->name]);
             CRUDBooster::redirect(CRUDBooster::adminPath(), trans('crudbooster.denied_access'));
         }
 

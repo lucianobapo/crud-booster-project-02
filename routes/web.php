@@ -17,7 +17,10 @@ Route::get('/', function () {
 
 
 Route::group([
-    'middleware' => ['web', '\crocodicstudio\crudbooster\middlewares\CBBackend'],
+    'middleware' => [
+        'web',
+//        '\crocodicstudio\crudbooster\middlewares\CBBackend'
+    ],
 //    'prefix' => config('crudbooster.ADMIN_PATH'),
 //    'namespace' => $namespace,
 ], function () {
