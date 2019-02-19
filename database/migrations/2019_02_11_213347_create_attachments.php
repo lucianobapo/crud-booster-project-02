@@ -22,8 +22,9 @@ class CreateAttachments extends Migration
             $table->timestamps();
             $table->softDeletes();
 
-            $table->boolean('check_referer')->nullable()->index();
-            $table->boolean('check_permissions')->nullable()->index();
+            $table->boolean('check_referer')->nullable();
+            $table->string('referers')->nullable();
+            $table->boolean('check_permissions')->nullable();
             $table->string('file')->index();
         });
 

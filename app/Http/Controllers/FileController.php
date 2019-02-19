@@ -3,6 +3,7 @@
 use App\Helpers\VideoStream;
 use crocodicstudio\crudbooster\helpers\CRUDBooster;
 use File;
+use Ramsey\Uuid\Uuid;
 use Session;
 use Image;
 use Request;
@@ -17,6 +18,8 @@ class FileController extends Controller
 
     public function getPreview($one, $two = null, $three = null, $four = null, $five = null, \Illuminate\Http\Request $request)
     {
+        if (CRUDBooster::isSuperadmin())
+            $this->seedAttachments();
 
         if ($two) {
             $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two;
@@ -33,7 +36,8 @@ class FileController extends Controller
                     }
                 }
             }
-        } else {
+        }
+        else {
             $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one;
             $filename = $one;
         }
@@ -170,25 +174,59 @@ class FileController extends Controller
 
     private function checkReferer(\Illuminate\Http\Request $request, string $fullFilePath)
     {
-        if (strpos($request->header('referer'),$request->getHttpHost())===false) {
-            CRUDBooster::insertLog('Referer error: '.
-                $request->header('referer').' ::: '.
-                $request->getHttpHost().' ::: '.
-                $fullFilePath);
-            abort(403);
+        $referers = $this->getFileData($fullFilePath)->referers;
+        $referers = explode(';',$referers);
+        foreach ($referers as $referer) {
+            if (strpos($request->header('referer'), $referer)===false) {
+                CRUDBooster::insertLog('Referer error: '.
+                    $request->header('referer').' ::: '.
+                    $request->getHttpHost().' ::: '.
+                    $fullFilePath);
+                abort(403);
+            }
         }
+
     }
 
     private function getFileData($fullFilePath)
     {
-        $data = DB::table($this->basic_dir)
-            ->where('file', $fullFilePath)
-            ->first();
+
+        $data = $this->firstAttachment($fullFilePath);
         if(empty($data)){
             CRUDBooster::insertLog('File not Found on Database: '.$fullFilePath);
             abort(404);
         }
 
+        return $data;
+    }
+
+    private function seedAttachments()
+    {
+        $attachments = Storage::allFiles($this->basic_dir);
+
+        foreach ($attachments as $attachment) {
+
+            if(empty($this->firstAttachment($attachment))){
+                $this->insertAttachment($attachment);
+            }
+
+        }
+    }
+
+    private function insertAttachment($attachment)
+    {
+        $result = DB::table('attachments')->insert([
+            'id'=>Uuid::uuid4(),
+            'owner_id'=>CRUDBooster::me()->owner_id,
+            'file'=>$attachment
+        ]);
+    }
+
+    private function firstAttachment($fullFilePath)
+    {
+        $data = DB::table($this->basic_dir)
+            ->where('file', $fullFilePath)
+            ->first();
         return $data;
     }
 }

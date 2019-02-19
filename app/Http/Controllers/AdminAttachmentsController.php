@@ -35,6 +35,7 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Arquivo","name"=>"file"];
 			$this->col[] = ["label"=>"Check Referer","name"=>"check_referer",'callback_php'=>'($row->check_referer?"Ativado":"Desativado")'];
+			$this->col[] = ["label"=>"Referers","name"=>"referers"];
 			$this->col[] = ["label"=>"Check Permissions","name"=>"check_permissions",'callback_php'=>'($row->check_permissions?"Ativado":"Desativado")'];
 			$this->col[] = ["label"=>"Grupo de Acesso","name"=>"cms_privilege_id","join"=>"cms_privileges,name"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
@@ -42,9 +43,10 @@
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
 			$this->form[] = ['label'=>'Arquivo','name'=>'file','type'=>'file','validation'=>'required','width'=>'col-sm-10'];
-			$this->form[] = ['label'=>'Check Referer','name'=>'check_referer','type'=>'checkbox','validation'=>'required','width'=>'col-sm-10','dataenum'=>'1|(Ativar - acesso somente dentro do site)'];
-			$this->form[] = ['label'=>'Check Permissions','name'=>'check_permissions','type'=>'checkbox','validation'=>'required','width'=>'col-sm-10','dataenum'=>'1|(Ativar - acesso somente do grupo)'];
-			$this->form[] = ['label'=>'Grupo de Acesso','name'=>'cms_privilege_id','type'=>'select2','validation'=>'required','width'=>'col-sm-10','datatable'=>'cms_privileges,name'];
+			$this->form[] = ['label'=>'Check Referer','name'=>'check_referer','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|(Ativar - acesso somente dentro do site)'];
+			$this->form[] = ['label'=>'Referers','name'=>'referers','type'=>'text','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Check Permissions','name'=>'check_permissions','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|(Ativar - acesso somente do grupo)'];
+			$this->form[] = ['label'=>'Grupo de Acesso','name'=>'cms_privilege_id','type'=>'select2','width'=>'col-sm-10','datatable'=>'cms_privileges,name'];
 			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
