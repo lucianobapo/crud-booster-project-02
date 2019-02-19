@@ -175,6 +175,11 @@ class FileController extends Controller
 
     private function checkReferer(\Illuminate\Http\Request $request, string $fullFilePath)
     {
+        if(!($request->hasHeader('X-Requested-With')&&$request->header('X-Requested-With')=='XMLHttpRequest')){
+            logger($request->headers);
+            $this->abort('Referer error: not XMLHttpRequest');
+        }
+
         $referers = $this->getFileData($fullFilePath)->referers;
         $referers = explode(';',$referers);
 
@@ -247,5 +252,12 @@ class FileController extends Controller
             ->where('file', $fullFilePath)
             ->first();
         return $data;
+    }
+
+    private function abort($message = '', $code = 403)
+    {
+        logger($message);
+        CRUDBooster::insertLog($message);
+        abort($code);
     }
 }

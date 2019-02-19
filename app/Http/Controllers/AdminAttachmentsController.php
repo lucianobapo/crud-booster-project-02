@@ -152,9 +152,46 @@
 	        | ---------------------------------------------------------------------- 
 	        | javascript code in the variable 
 	        | $this->script_js = "function() { ... }";
-	        |
+	        |$( '#result' ).load( 'http://crudbooster.localhost.com/attachments/2019-02/logo2.png' );
 	        */
-	        $this->script_js = NULL;
+	        $this->script_js = "
+	        
+	        
+	        var xhr = new XMLHttpRequest();
+xhr.responseType = 'blob';
+
+xhr.onload = function() {
+  
+  var reader = new FileReader();
+  
+  reader.onloadend = function() {
+  
+    var byteCharacters = atob(reader.result.slice(reader.result.indexOf(',') + 1));
+    
+    var byteNumbers = new Array(byteCharacters.length);
+
+    for (var i = 0; i < byteCharacters.length; i++) {
+      
+      byteNumbers[i] = byteCharacters.charCodeAt(i);
+      
+    }
+
+    var byteArray = new Uint8Array(byteNumbers);
+    var blob = new Blob([byteArray], {type: 'video/mp4'});
+    var url = URL.createObjectURL(blob);
+    
+    document.getElementById('_video').src = url;
+    
+  }
+  
+  reader.readAsDataURL(xhr.response);
+  
+};
+
+xhr.open('GET', 'http://teste.tigresavip.com.br/attachments/videos/video-6747.mp4', true);
+xhr.send();
+
+	        ";
 
 
             /*
@@ -177,7 +214,7 @@
 	        | $this->post_index_html = "<p>test</p>";
 	        |
 	        */
-	        $this->post_index_html = null;
+	        $this->post_index_html = "<video controls='' preload='auto' id='_video'></video>";
 	        
 	        
 	        
