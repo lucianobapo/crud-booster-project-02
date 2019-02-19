@@ -182,16 +182,17 @@ class FileController extends Controller
             $this->abort('Referer error: No Header Origin or Referer');
         }
 
+        $referers = $this->getFileData($fullFilePath)->referers;
+        $referers = explode(';',$referers);
 
-//        $abort = $this->checkHeaderToAbort($request->header('Origin'), $fullFilePath);
-//        $abort = $this->checkHeaderToAbort($request->header('Referer'), $fullFilePath);
-        logger($request->headers);
-        if($this->checkHeaderToAbort($request->header('Origin'), $fullFilePath)
-            && $this->checkHeaderToAbort($request->header('Referer'), $fullFilePath)){
-//            logger($request->headers);
-            $this->abort('Referer error: Headers not match');
+        logger($referers);
+        $abort = true;
+        foreach ($referers as $referer) {
+            if (strpos($request->header('Origin'), $referer)!==false) $abort = false;
+            if (strpos($request->header('Referer'), $referer)!==false) $abort = false;
         }
-
+        if ($abort)
+            $this->abort('Referer error: Headers not match');
 
 
     }
@@ -245,17 +246,4 @@ class FileController extends Controller
         abort($code);
     }
 
-    private function checkHeaderToAbort($header, $fullFilePath)
-    {
-        $abort = true;
-        $referers = $this->getFileData($fullFilePath)->referers;
-        $referers = explode(';',$referers);
-
-        logger($referers);
-        foreach ($referers as $referer) {
-            if ($abort)
-                $abort = (strpos($header, $referer)===false);
-        }
-        return $abort;
-    }
 }
