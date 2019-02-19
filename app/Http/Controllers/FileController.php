@@ -121,6 +121,7 @@ class FileController extends Controller
             'Content-Type' => $header_content_type,
             'Content-Length' => $header_content_length,
             'Access-Control-Allow-Origin' => '*',
+            'Access-Control-Allow-Headers' => '*',
         ]);
 
 
