@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,56 +18,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="416" column="27" selection-start-line="416" selection-start-column="27" selection-end-line="416" selection-end-column="27" />
+            <state relative-caret-position="250">
+              <caret line="344" column="48" selection-start-line="344" selection-start-column="48" selection-end-line="344" selection-end-column="48" />
               <folding>
                 <element signature="e#40#82#0#PHP" expanded="true" />
                 <element signature="e#10364#11358#0#PHP" />
                 <element signature="e#11649#11728#0#PHP" />
                 <element signature="e#12053#12322#0#PHP" />
-                <element signature="e#12994#13069#0#PHP" />
                 <element signature="e#13369#13443#0#PHP" />
                 <element signature="e#13527#15220#0#PHP" />
-                <element signature="e#15802#16043#0#PHP" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="313">
-              <caret line="209" selection-start-line="209" selection-end-line="215" selection-end-column="5" />
-              <folding>
-                <element signature="e#39#67#0#PHP" expanded="true" />
-                <element signature="e#430#1426#0#PHP" />
-                <element signature="e#1309#1426#0#PHP" />
-                <element signature="e#2279#3134#0#PHP" />
-                <element signature="e#5276#5596#0#PHP" />
-                <element signature="e#5602#6289#0#PHP" />
-                <element signature="e#6455#7284#0#PHP" />
-                <element signature="e#6705#7035#0#PHP" />
-                <element signature="e#8317#8469#0#PHP" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/VideoStream.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
-          <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="-669">
-              <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -413,19 +372,19 @@
       <workItem from="1549404668750" duration="5031000" />
       <workItem from="1549538093652" duration="1553000" />
       <workItem from="1549576092445" duration="35349000" />
-      <workItem from="1549843576897" duration="133100000" />
+      <workItem from="1549843576897" duration="133640000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198455000" />
+    <option name="totallyTimeSpent" value="198995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1241" height="693" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952381" weight="0.31799164" />
-      <window_info id="Structure" order="1" sideWeight="0.50476193" side_tool="true" weight="0.31799164" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.50476193" side_tool="true" visible="true" weight="0.31799164" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -439,7 +398,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.33393177" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.33393177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -820,17 +779,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/VideoStream.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="313">
-          <caret line="209" selection-start-line="209" selection-end-line="215" selection-end-column="5" />
+        <state relative-caret-position="1198">
+          <caret line="217" column="54" lean-forward="true" selection-start-line="217" selection-start-column="54" selection-end-line="217" selection-end-column="54" />
           <folding>
             <element signature="e#39#67#0#PHP" expanded="true" />
             <element signature="e#430#1426#0#PHP" />
@@ -840,24 +792,29 @@
             <element signature="e#5602#6289#0#PHP" />
             <element signature="e#6455#7284#0#PHP" />
             <element signature="e#6705#7035#0#PHP" />
-            <element signature="e#8317#8469#0#PHP" />
+            <element signature="e#7440#7631#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/VideoStream.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="416" column="27" selection-start-line="416" selection-start-column="27" selection-end-line="416" selection-end-column="27" />
+        <state relative-caret-position="250">
+          <caret line="344" column="48" selection-start-line="344" selection-start-column="48" selection-end-line="344" selection-end-column="48" />
           <folding>
             <element signature="e#40#82#0#PHP" expanded="true" />
             <element signature="e#10364#11358#0#PHP" />
             <element signature="e#11649#11728#0#PHP" />
             <element signature="e#12053#12322#0#PHP" />
-            <element signature="e#12994#13069#0#PHP" />
             <element signature="e#13369#13443#0#PHP" />
             <element signature="e#13527#15220#0#PHP" />
-            <element signature="e#15802#16043#0#PHP" />
           </folding>
         </state>
       </provider>

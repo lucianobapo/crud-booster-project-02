@@ -339,6 +339,11 @@
 	    */
 	    public function hook_before_delete($id) {
 	        //Your code here
+            $attachment = $this->firstByID($id);
+            if (!$attachment) $this->abort('Data Not Found', 404);
+
+            if(Storage::exists($attachment->file))
+                Storage::delete($attachment->file);
 
 	    }
 
@@ -436,5 +441,20 @@
                 ->where('file', $fullFilePath)
                 ->first();
             return $data;
+        }
+
+        private function firstByID($id)
+        {
+            $data = DB::table($this->table)
+                ->where('id', $id)
+                ->first();
+            return $data;
+        }
+
+        private function abort($message = '', $code = 403)
+        {
+            logger($message);
+            CRUDBooster::insertLog($message);
+            abort($code);
         }
     }
