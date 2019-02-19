@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="" />
+    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,30 +16,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="159" column="12" selection-start-line="159" selection-start-column="12" selection-end-line="191" selection-end-column="11" />
+            <state relative-caret-position="269">
+              <caret line="416" column="27" selection-start-line="416" selection-start-column="27" selection-end-line="416" selection-end-column="27" />
               <folding>
                 <element signature="e#40#82#0#PHP" expanded="true" />
-                <element signature="e#9534#9754#0#PHP" />
                 <element signature="e#10364#11358#0#PHP" />
                 <element signature="e#11649#11728#0#PHP" />
                 <element signature="e#12053#12322#0#PHP" />
                 <element signature="e#12994#13069#0#PHP" />
                 <element signature="e#13369#13443#0#PHP" />
                 <element signature="e#13527#15220#0#PHP" />
+                <element signature="e#15802#16043#0#PHP" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="253" column="24" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="24" />
+            <state relative-caret-position="313">
+              <caret line="209" selection-start-line="209" selection-end-line="215" selection-end-column="5" />
               <folding>
                 <element signature="e#39#67#0#PHP" expanded="true" />
                 <element signature="e#430#1426#0#PHP" />
@@ -44,10 +47,9 @@
                 <element signature="e#2279#3134#0#PHP" />
                 <element signature="e#5276#5596#0#PHP" />
                 <element signature="e#5602#6289#0#PHP" />
+                <element signature="e#6455#7284#0#PHP" />
                 <element signature="e#6705#7035#0#PHP" />
-                <element signature="e#7250#7296#0#PHP" />
-                <element signature="e#7470#7528#0#PHP" />
-                <element signature="e#7740#7799#0#PHP" />
+                <element signature="e#8317#8469#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -100,6 +102,7 @@
       <find>pos</find>
       <find>DB::table</find>
       <find>$</find>
+      <find>index_button</find>
       <find>$handler</find>
     </findStrings>
   </component>
@@ -156,10 +159,10 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_11_213347_create_attachments.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log" />
         <option value="$PROJECT_DIR$/app/helpers/VideoStream.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FileController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" />
       </list>
     </option>
   </component>
@@ -410,15 +413,16 @@
       <workItem from="1549404668750" duration="5031000" />
       <workItem from="1549538093652" duration="1553000" />
       <workItem from="1549576092445" duration="35349000" />
-      <workItem from="1549843576897" duration="127001000" />
+      <workItem from="1549843576897" duration="133100000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192356000" />
+    <option name="totallyTimeSpent" value="198455000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1241" height="693" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952381" weight="0.31799164" />
       <window_info id="Structure" order="1" sideWeight="0.50476193" side_tool="true" weight="0.31799164" />
@@ -435,7 +439,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.4290844" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.33393177" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -809,23 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="159" column="12" selection-start-line="159" selection-start-column="12" selection-end-line="191" selection-end-column="11" />
-          <folding>
-            <element signature="e#40#82#0#PHP" expanded="true" />
-            <element signature="e#9534#9754#0#PHP" />
-            <element signature="e#10364#11358#0#PHP" />
-            <element signature="e#11649#11728#0#PHP" />
-            <element signature="e#12053#12322#0#PHP" />
-            <element signature="e#12994#13069#0#PHP" />
-            <element signature="e#13369#13443#0#PHP" />
-            <element signature="e#13527#15220#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="-669">
@@ -842,8 +829,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="253" column="24" selection-start-line="253" selection-start-column="24" selection-end-line="253" selection-end-column="24" />
+        <state relative-caret-position="313">
+          <caret line="209" selection-start-line="209" selection-end-line="215" selection-end-column="5" />
           <folding>
             <element signature="e#39#67#0#PHP" expanded="true" />
             <element signature="e#430#1426#0#PHP" />
@@ -851,10 +838,26 @@
             <element signature="e#2279#3134#0#PHP" />
             <element signature="e#5276#5596#0#PHP" />
             <element signature="e#5602#6289#0#PHP" />
+            <element signature="e#6455#7284#0#PHP" />
             <element signature="e#6705#7035#0#PHP" />
-            <element signature="e#7250#7296#0#PHP" />
-            <element signature="e#7470#7528#0#PHP" />
-            <element signature="e#7740#7799#0#PHP" />
+            <element signature="e#8317#8469#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="269">
+          <caret line="416" column="27" selection-start-line="416" selection-start-column="27" selection-end-line="416" selection-end-column="27" />
+          <folding>
+            <element signature="e#40#82#0#PHP" expanded="true" />
+            <element signature="e#10364#11358#0#PHP" />
+            <element signature="e#11649#11728#0#PHP" />
+            <element signature="e#12053#12322#0#PHP" />
+            <element signature="e#12994#13069#0#PHP" />
+            <element signature="e#13369#13443#0#PHP" />
+            <element signature="e#13527#15220#0#PHP" />
+            <element signature="e#15802#16043#0#PHP" />
           </folding>
         </state>
       </provider>

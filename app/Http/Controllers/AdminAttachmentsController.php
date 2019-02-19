@@ -120,7 +120,7 @@
 	        | @icon  = Icon from Awesome.
 	        | 
 	        */
-	        $this->index_button = array();
+	        $this->index_button = [];
 
 
 
@@ -154,44 +154,7 @@
 	        | $this->script_js = "function() { ... }";
 	        |$( '#result' ).load( 'http://crudbooster.localhost.com/attachments/2019-02/logo2.png' );
 	        */
-	        $this->script_js = "
-	        
-	        
-	        var xhr = new XMLHttpRequest();
-xhr.responseType = 'blob';
-
-xhr.onload = function() {
-  
-  var reader = new FileReader();
-  
-  reader.onloadend = function() {
-  
-    var byteCharacters = atob(reader.result.slice(reader.result.indexOf(',') + 1));
-    
-    var byteNumbers = new Array(byteCharacters.length);
-
-    for (var i = 0; i < byteCharacters.length; i++) {
-      
-      byteNumbers[i] = byteCharacters.charCodeAt(i);
-      
-    }
-
-    var byteArray = new Uint8Array(byteNumbers);
-    var blob = new Blob([byteArray], {type: 'video/mp4'});
-    var url = URL.createObjectURL(blob);
-    
-    document.getElementById('_video').src = url;
-    
-  }
-  
-  reader.readAsDataURL(xhr.response);
-  
-};
-
-xhr.open('GET', 'http://teste.tigresavip.com.br/attachments/videos/video-6747.mp4', true);
-xhr.send();
-
-	        ";
+	        $this->script_js = "";
 
 
             /*
@@ -214,7 +177,7 @@ xhr.send();
 	        | $this->post_index_html = "<p>test</p>";
 	        |
 	        */
-	        $this->post_index_html = "<video controls='' preload='auto' id='_video'></video>";
+	        $this->post_index_html = "";
 	        
 	        
 	        
@@ -281,7 +244,9 @@ xhr.send();
 	        //Your code here
             $me = CRUDBooster::me();
             if(!empty($me->owner_id)) $query->where($this->table.'.owner_id',$me->owner_id);
-	            
+
+            if (CRUDBooster::isSuperadmin())
+                $this->seedAttachments();
 	    }
 
 	    /*
@@ -442,4 +407,34 @@ xhr.send();
                 return null;
             }
         }
-	}
+
+        private function seedAttachments()
+        {
+            $attachments = Storage::allFiles($this->table);
+
+            foreach ($attachments as $attachment) {
+
+                if(empty($this->firstAttachment($attachment))){
+                    $this->insertAttachment($attachment);
+                }
+
+            }
+        }
+
+        private function insertAttachment($attachment)
+        {
+            $result = DB::table($this->table)->insert([
+                'id'=>Uuid::uuid4(),
+                'owner_id'=>CRUDBooster::me()->owner_id,
+                'file'=>$attachment
+            ]);
+        }
+
+        private function firstAttachment($fullFilePath)
+        {
+            $data = DB::table($this->table)
+                ->where('file', $fullFilePath)
+                ->first();
+            return $data;
+        }
+    }

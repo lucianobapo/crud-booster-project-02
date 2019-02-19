@@ -18,8 +18,6 @@ class FileController extends Controller
 
     public function getPreview($one, $two = null, $three = null, $four = null, $five = null, \Illuminate\Http\Request $request)
     {
-        if (CRUDBooster::isSuperadmin())
-            $this->seedAttachments();
 
         if ($two) {
             $fullFilePath = $this->basic_dir.DIRECTORY_SEPARATOR.$one.DIRECTORY_SEPARATOR.$two;
@@ -207,28 +205,6 @@ class FileController extends Controller
         }
 
         return $data;
-    }
-
-    private function seedAttachments()
-    {
-        $attachments = Storage::allFiles($this->basic_dir);
-
-        foreach ($attachments as $attachment) {
-
-            if(empty($this->firstAttachment($attachment))){
-                $this->insertAttachment($attachment);
-            }
-
-        }
-    }
-
-    private function insertAttachment($attachment)
-    {
-        $result = DB::table('attachments')->insert([
-            'id'=>Uuid::uuid4(),
-            'owner_id'=>CRUDBooster::me()->owner_id,
-            'file'=>$attachment
-        ]);
     }
 
     private function firstAttachment($fullFilePath)
