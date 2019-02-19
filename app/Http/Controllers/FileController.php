@@ -180,14 +180,14 @@ class FileController extends Controller
 
         $abort = true;
         $header = $request->header('referer');
-        logger($header);
+
         foreach ($referers as $referer) {
             if ($abort)
             $abort = (strpos($header, $referer)===false);
-
         }
 
         if($abort){
+            logger($request->headers);
             CRUDBooster::insertLog('Referer error: '.
                 $header .' ::: '.
                 $request->getHttpHost().' ::: '.
