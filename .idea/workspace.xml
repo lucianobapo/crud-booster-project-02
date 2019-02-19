@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" afterDir="false" />
-    </list>
+    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,11 +32,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="235">
-              <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+              <caret line="188" selection-start-line="188" selection-end-line="188" />
               <folding>
                 <element signature="e#39#67#0#PHP" expanded="true" />
                 <element signature="e#2279#3134#0#PHP" />
@@ -53,10 +51,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
           <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="-610" />
+            <state relative-caret-position="187">
+              <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -146,9 +146,9 @@
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_11_213347_create_attachments.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FileController.php" />
+        <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log" />
       </list>
     </option>
   </component>
@@ -399,16 +399,15 @@
       <workItem from="1549404668750" duration="5031000" />
       <workItem from="1549538093652" duration="1553000" />
       <workItem from="1549576092445" duration="35349000" />
-      <workItem from="1549843576897" duration="119848000" />
+      <workItem from="1549843576897" duration="120331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="185203000" />
+    <option name="totallyTimeSpent" value="185686000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1241" height="693" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952381" weight="0.31799164" />
       <window_info id="Structure" order="1" sideWeight="0.50476193" side_tool="true" weight="0.31799164" />
@@ -425,7 +424,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.4290844" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.4290844" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -823,15 +822,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-610" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="235">
-          <caret line="188" lean-forward="true" selection-start-line="188" selection-end-line="188" />
+          <caret line="188" selection-start-line="188" selection-end-line="188" />
           <folding>
             <element signature="e#39#67#0#PHP" expanded="true" />
             <element signature="e#2279#3134#0#PHP" />
@@ -842,6 +836,13 @@
             <element signature="e#7470#7528#0#PHP" />
             <element signature="e#7740#7799#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="187">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
         </state>
       </provider>
     </entry>
