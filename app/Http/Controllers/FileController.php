@@ -120,6 +120,7 @@ class FileController extends Controller
         $headers = array_merge($headers, [
             'Content-Type' => $header_content_type,
             'Content-Length' => $header_content_length,
+            'Access-Control-Allow-Origin' => '*',
         ]);
 
 
