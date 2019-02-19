@@ -175,39 +175,26 @@ class FileController extends Controller
 
     private function checkReferer(\Illuminate\Http\Request $request, string $fullFilePath)
     {
-        if(!($request->hasHeader('X-Requested-With')&&$request->header('X-Requested-With')=='XMLHttpRequest')){
+
+        if( !($request->hasHeader('Origin') || $request->hasHeader('Referer')) ){
             logger($request->headers);
-            $this->abort('Referer error: not XMLHttpRequest');
+            $this->abort('Referer error: not XMLHttpRequest, No Header Origin or Referer');
         }
 
         $referers = $this->getFileData($fullFilePath)->referers;
         $referers = explode(';',$referers);
 
         $abort = true;
-        $header = $request->header('referer');
+        $header = $request->header('Origin');
 
         foreach ($referers as $referer) {
             if ($abort)
             $abort = (strpos($header, $referer)===false);
         }
 
-        if($abort){
-            if (array_key_exists('HTTP_ORIGIN', $_SERVER)) {
-                $origin = $_SERVER['HTTP_ORIGIN'];
-            }
-            else if (array_key_exists('HTTP_REFERER', $_SERVER)) {
-                $origin = $_SERVER['HTTP_REFERER'];
-            } else {
-                $origin = $_SERVER['REMOTE_ADDR'];
-            }
-            logger($origin);
-            logger($request->headers);
-            CRUDBooster::insertLog('Referer error: '.
-                $header .' ::: '.
-                $request->getHttpHost().' ::: '.
-                $fullFilePath);
-            abort(403);
-        }
+        if($abort)
+            $this->abort('Referer error: Origin Header not match');
+
 
 
     }
