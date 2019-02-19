@@ -51,7 +51,6 @@ class FileController extends Controller
         $fullStoragePath = storage_path('app/'.$fullFilePath);
         $lifetime = 31556926; // One year in seconds
 
-        $handler = new \Symfony\Component\HttpFoundation\File\File(storage_path('app/'.$fullFilePath));
 
         if (! Storage::exists($fullFilePath)) {
             CRUDBooster::insertLog('File not Found: '.$fullFilePath);
@@ -93,6 +92,8 @@ class FileController extends Controller
         /**
          * Prepare some header variables
          */
+        $handler = new \Symfony\Component\HttpFoundation\File\File(storage_path('app/'.$fullFilePath));
+
         $file_time = $handler->getMTime(); // Get the last modified time for the file (Unix timestamp)
 
         $header_content_type = $handler->getMimeType();
