@@ -103,10 +103,9 @@ class FileController extends Controller
         $header_expires = gmdate('r', $file_time + $lifetime);
 
         $headers = [
-//            'Access-Control-Allow-Origin' => '*',
-//            'Access-Control-Allow-Headers' => '*',
-//            'Content-Disposition' => 'inline; filename="'.$filename.'"',
-//            'Last-Modified' => $header_last_modified,
+            'Access-Control-Allow-Origin' => '*',
+            'Content-Disposition' => 'inline; filename="'.$filename.'"',
+            'Last-Modified' => $header_last_modified,
             'Cache-Control' => 'must-revalidate',
             'Expires' => $header_expires,
             'Pragma' => 'public',

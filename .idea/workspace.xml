@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/helpers/VideoStream.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/helpers/VideoStream.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="122" column="40" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="40" />
+            <state relative-caret-position="87">
+              <caret line="105" column="40" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="40" />
               <folding>
                 <element signature="e#39#67#0#PHP" expanded="true" />
                 <element signature="e#2279#3134#0#PHP" />
@@ -53,11 +54,20 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/helpers/VideoStream.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
           <provider selected="true" editor-type-id="LogFileEditorProvider">
             <state relative-caret-position="172">
-              <caret line="27" column="69" lean-forward="true" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+              <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -134,7 +144,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_02_11_213504_create_posts.php" />
         <option value="$PROJECT_DIR$/resources/views/vendor/crudbooster/type_components/file/info.json" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-12.log" />
-        <option value="$PROJECT_DIR$/app/helpers/VideoStream.php" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/helpers/CRUDBooster.php" />
@@ -151,6 +160,7 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FileController.php" />
+        <option value="$PROJECT_DIR$/app/helpers/VideoStream.php" />
       </list>
     </option>
   </component>
@@ -401,15 +411,16 @@
       <workItem from="1549404668750" duration="5031000" />
       <workItem from="1549538093652" duration="1553000" />
       <workItem from="1549576092445" duration="35349000" />
-      <workItem from="1549843576897" duration="121108000" />
+      <workItem from="1549843576897" duration="121727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="186463000" />
+    <option name="totallyTimeSpent" value="187082000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1241" height="693" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952381" weight="0.31799164" />
       <window_info id="Structure" order="1" sideWeight="0.50476193" side_tool="true" weight="0.31799164" />
@@ -426,7 +437,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.4290844" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.4290844" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -485,13 +496,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/helpers/VideoStream.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="134">
@@ -827,14 +831,14 @@
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
       <provider selected="true" editor-type-id="LogFileEditorProvider">
         <state relative-caret-position="172">
-          <caret line="27" column="69" lean-forward="true" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
+          <caret line="27" column="69" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="122" column="40" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="40" />
+        <state relative-caret-position="87">
+          <caret line="105" column="40" selection-start-line="105" selection-start-column="13" selection-end-line="105" selection-end-column="40" />
           <folding>
             <element signature="e#39#67#0#PHP" expanded="true" />
             <element signature="e#2279#3134#0#PHP" />
@@ -845,6 +849,13 @@
             <element signature="e#7470#7528#0#PHP" />
             <element signature="e#7740#7799#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/helpers/VideoStream.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="46" selection-end-line="38" selection-end-column="46" />
         </state>
       </provider>
     </entry>
