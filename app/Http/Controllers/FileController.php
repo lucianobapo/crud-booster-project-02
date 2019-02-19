@@ -103,8 +103,10 @@ class FileController extends Controller
         $header_expires = gmdate('r', $file_time + $lifetime);
 
         $headers = [
-            'Content-Disposition' => 'inline; filename="'.$filename.'"',
-            'Last-Modified' => $header_last_modified,
+//            'Access-Control-Allow-Origin' => '*',
+//            'Access-Control-Allow-Headers' => '*',
+//            'Content-Disposition' => 'inline; filename="'.$filename.'"',
+//            'Last-Modified' => $header_last_modified,
             'Cache-Control' => 'must-revalidate',
             'Expires' => $header_expires,
             'Pragma' => 'public',
@@ -120,8 +122,6 @@ class FileController extends Controller
         $headers = array_merge($headers, [
             'Content-Type' => $header_content_type,
             'Content-Length' => $header_content_length,
-            'Access-Control-Allow-Origin' => '*',
-            'Access-Control-Allow-Headers' => '*',
         ]);
 
 
