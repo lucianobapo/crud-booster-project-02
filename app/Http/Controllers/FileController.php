@@ -177,21 +177,21 @@ class FileController extends Controller
     private function checkReferer(\Illuminate\Http\Request $request, string $fullFilePath)
     {
 
-//        if( !($request->hasHeader('Origin') || $request->hasHeader('Referer')) ){
-//            logger($request->headers);
-//            $this->abort('Referer error: not XMLHttpRequest, No Header Origin or Referer');
-//        }
+        if( !($request->hasHeader('Origin') || $request->hasHeader('Referer')) ){
+            logger($request->headers);
+            $this->abort('Referer error: No Header Origin or Referer');
+        }
 
 
 //        $abort = $this->checkHeaderToAbort($request->header('Origin'), $fullFilePath);
 //        $abort = $this->checkHeaderToAbort($request->header('Referer'), $fullFilePath);
-
-//        if($this->checkHeaderToAbort($request->header('Origin'), $fullFilePath)
-//            && $this->checkHeaderToAbort($request->header('Referer'), $fullFilePath)){
-//            logger($request->headers);
-//            $this->abort('Referer error: Headers not match');
-//        }
         logger($request->headers);
+        if($this->checkHeaderToAbort($request->header('Origin'), $fullFilePath)
+            && $this->checkHeaderToAbort($request->header('Referer'), $fullFilePath)){
+//            logger($request->headers);
+            $this->abort('Referer error: Headers not match');
+        }
+
 
 
     }
