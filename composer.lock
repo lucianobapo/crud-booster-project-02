@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "90dc526bc2b554b6f9c5377feb7e466b",
+    "content-hash": "f9bc12be98933374559709fe326922d8",
     "packages": [
         {
             "name": "barryvdh/laravel-dompdf",
@@ -64,16 +64,16 @@
         },
         {
             "name": "crocodicstudio/crudbooster",
-            "version": "v5.4.19.2",
+            "version": "v5.4.19.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/lucianobapo/crudbooster.git",
-                "reference": "d544295d32a961e0684f2b87ec44e18b1e73db66"
+                "reference": "d9733df98b65e849c126d35cf24b5841d384bea6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lucianobapo/crudbooster/zipball/d544295d32a961e0684f2b87ec44e18b1e73db66",
-                "reference": "d544295d32a961e0684f2b87ec44e18b1e73db66",
+                "url": "https://api.github.com/repos/lucianobapo/crudbooster/zipball/d9733df98b65e849c126d35cf24b5841d384bea6",
+                "reference": "d9733df98b65e849c126d35cf24b5841d384bea6",
                 "shasum": ""
             },
             "require": {
@@ -112,9 +112,9 @@
                 "laravel"
             ],
             "support": {
-                "source": "https://github.com/lucianobapo/crudbooster/tree/v5.4.19.2"
+                "source": "https://github.com/lucianobapo/crudbooster/tree/v5.4.19.3"
             },
-            "time": "2019-02-13T23:24:04+00:00"
+            "time": "2019-02-19T01:11:42+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -1711,24 +1711,24 @@
         },
         {
             "name": "laravel/socialite",
-            "version": "v4.0.3",
+            "version": "v4.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/socialite.git",
-                "reference": "25eea36010c4e714c58a4792ef52b0a8e8a9c21c"
+                "reference": "7581c57a60742f423a68362c79d507028f989bd7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/socialite/zipball/25eea36010c4e714c58a4792ef52b0a8e8a9c21c",
-                "reference": "25eea36010c4e714c58a4792ef52b0a8e8a9c21c",
+                "url": "https://api.github.com/repos/laravel/socialite/zipball/7581c57a60742f423a68362c79d507028f989bd7",
+                "reference": "7581c57a60742f423a68362c79d507028f989bd7",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "guzzlehttp/guzzle": "~6.0",
-                "illuminate/contracts": "~5.7",
-                "illuminate/http": "~5.7",
-                "illuminate/support": "~5.7",
+                "illuminate/contracts": "~5.7.0|~5.8.0",
+                "illuminate/http": "~5.7.0|~5.8.0",
+                "illuminate/support": "~5.7.0|~5.8.0",
                 "league/oauth1-client": "~1.0",
                 "php": "^7.1.3"
             },
@@ -1771,7 +1771,7 @@
                 "laravel",
                 "oauth"
             ],
-            "time": "2019-01-21T12:35:13+00:00"
+            "time": "2019-02-14T16:57:39+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -2305,16 +2305,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.0",
+            "version": "v4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "594bcae1fc0bccd3993d2f0d61a018e26ac2865a"
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/594bcae1fc0bccd3993d2f0d61a018e26ac2865a",
-                "reference": "594bcae1fc0bccd3993d2f0d61a018e26ac2865a",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/5221f49a608808c1e4d436df32884cbc1b821ac0",
+                "reference": "5221f49a608808c1e4d436df32884cbc1b821ac0",
                 "shasum": ""
             },
             "require": {
@@ -2352,7 +2352,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-01-12T16:31:37+00:00"
+            "time": "2019-02-16T20:54:15+00:00"
         },
         {
             "name": "opis/closure",
@@ -5569,16 +5569,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "7.5.4",
+            "version": "7.5.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2896657da5fb237bc316bdfc18c2650efeee0dc0"
+                "reference": "09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2896657da5fb237bc316bdfc18c2650efeee0dc0",
-                "reference": "2896657da5fb237bc316bdfc18c2650efeee0dc0",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9",
+                "reference": "09c85e14994df92e5ff1f5ec0b481bdb7d3d3df9",
                 "shasum": ""
             },
             "require": {
@@ -5649,7 +5649,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2019-02-07T14:15:04+00:00"
+            "time": "2019-02-18T09:24:50+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

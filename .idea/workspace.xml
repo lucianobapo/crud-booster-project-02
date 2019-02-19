@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="" />
+    <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +32,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="40">
-              <caret line="174" column="66" lean-forward="true" selection-start-line="174" selection-start-column="66" selection-end-line="174" selection-end-column="66" />
+            <state relative-caret-position="17">
+              <caret line="180" column="22" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
               <folding>
                 <element signature="e#39#67#0#PHP" expanded="true" />
-                <element signature="e#430#1426#0#PHP" />
-                <element signature="e#1309#1426#0#PHP" />
-                <element signature="e#1898#2041#0#PHP" />
                 <element signature="e#2279#3134#0#PHP" />
                 <element signature="e#5276#5596#0#PHP" />
                 <element signature="e#5602#6289#0#PHP" />
@@ -50,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
           <provider selected="true" editor-type-id="LogFileEditorProvider">
-            <state relative-caret-position="-686">
+            <state relative-caret-position="-684">
               <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
             </state>
           </provider>
@@ -106,6 +107,7 @@
       <find>pos</find>
       <find>DB::table</find>
       <find>$</find>
+      <find>$handler</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -173,7 +175,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
-      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
       <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
       <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
@@ -283,6 +284,7 @@
       <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
       <path value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
@@ -415,15 +417,16 @@
       <workItem from="1549404668750" duration="5031000" />
       <workItem from="1549538093652" duration="1553000" />
       <workItem from="1549576092445" duration="35349000" />
-      <workItem from="1549843576897" duration="105038000" />
+      <workItem from="1549843576897" duration="106149000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="170393000" />
+    <option name="totallyTimeSpent" value="171504000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1241" height="693" extended-state="6" />
+    <frame x="0" y="27" width="1241" height="693" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952381" visible="true" weight="0.31799164" />
       <window_info id="Structure" order="1" sideWeight="0.50476193" side_tool="true" weight="0.31799164" />
@@ -440,7 +443,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.9174147" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.40574506" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -499,11 +502,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/bootstrap/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-275" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/helpers/VideoStream.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -821,6 +819,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="-684">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
@@ -831,22 +836,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-686">
-          <caret line="2" column="39" selection-start-line="2" selection-start-column="39" selection-end-line="2" selection-end-column="39" />
-        </state>
+    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/FileController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="174" column="66" lean-forward="true" selection-start-line="174" selection-start-column="66" selection-end-line="174" selection-end-column="66" />
+        <state relative-caret-position="17">
+          <caret line="180" column="22" selection-start-line="180" selection-start-column="22" selection-end-line="180" selection-end-column="22" />
           <folding>
             <element signature="e#39#67#0#PHP" expanded="true" />
-            <element signature="e#430#1426#0#PHP" />
-            <element signature="e#1309#1426#0#PHP" />
-            <element signature="e#1898#2041#0#PHP" />
             <element signature="e#2279#3134#0#PHP" />
             <element signature="e#5276#5596#0#PHP" />
             <element signature="e#5602#6289#0#PHP" />
