@@ -251,6 +251,7 @@ class FileController extends Controller
         $referers = $this->getFileData($fullFilePath)->referers;
         $referers = explode(';',$referers);
 
+        logger($referers);
         foreach ($referers as $referer) {
             if ($abort)
                 $abort = (strpos($header, $referer)===false);
