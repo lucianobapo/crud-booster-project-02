@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,12 +15,27 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+    <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+            <state relative-caret-position="180">
+              <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+              <folding>
+                <element signature="e#40#82#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/helpers/CRUDBooster.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="233" column="24" selection-start-line="233" selection-start-column="17" selection-end-line="233" selection-end-column="24" />
+              <folding>
+                <element signature="e#54#64#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,8 +44,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>cadastra</find>
-      <find>letter</find>
       <find>alert_info</find>
       <find>Information</find>
       <find>content-header</find>
@@ -55,6 +69,11 @@
       <find>$</find>
       <find>index_button</find>
       <find>$handler</find>
+      <find>primary</find>
+      <find>gettype</find>
+      <find>import</find>
+      <find>primar</find>
+      <find>session</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -71,7 +90,6 @@
         <option value="$PROJECT_DIR$/resources/lang/pt_br/crudbooster.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_10_174555_create_address_types.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-11.log" />
-        <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_11_182717_create_owners.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_11_183314_add_owner_to_user.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php" />
@@ -111,9 +129,10 @@
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-19.log" />
         <option value="$PROJECT_DIR$/app/helpers/VideoStream.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/FileController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" />
         <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/helpers/CRUDBooster.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" />
       </list>
     </option>
   </component>
@@ -235,9 +254,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="45" />
+    <option name="x" value="18" />
     <option name="y" value="27" />
-    <option name="width" value="1235" />
+    <option name="width" value="1223" />
     <option name="height" value="693" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -246,6 +265,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -262,23 +282,29 @@
               <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
               <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Console" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
               <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="Http" type="462c0819:PsiDirectoryNode" />
+              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
+              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
+              <item name="storage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/configs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cb-simple-stock-manager" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -329,18 +355,19 @@
       <workItem from="1549404668750" duration="5031000" />
       <workItem from="1549538093652" duration="1553000" />
       <workItem from="1549576092445" duration="35349000" />
-      <workItem from="1549843576897" duration="146263000" />
+      <workItem from="1549843576897" duration="158251000" />
+      <workItem from="1550864857874" duration="9674000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="211618000" />
+    <option name="totallyTimeSpent" value="233280000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1241" height="693" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952381" visible="true" weight="0.31799164" />
-      <window_info id="Structure" order="1" sideWeight="0.50476193" side_tool="true" weight="0.31799164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.26570916" visible="true" weight="0.32384938" />
+      <window_info id="Structure" order="1" sideWeight="0.73429084" side_tool="true" weight="0.31799164" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -354,15 +381,15 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.94614005" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.3752244" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4952381" weight="0.31799164" />
-      <window_info id="Structure" order="1" sideWeight="0.50476193" side_tool="true" weight="0.31799164" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.26570916" visible="true" weight="0.31799164" />
+      <window_info id="Structure" order="1" sideWeight="0.73429084" side_tool="true" weight="0.31799164" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -376,7 +403,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.4290844" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.34649912" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -411,21 +438,22 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="37" column="5" lean-forward="true" selection-start-line="37" selection-start-column="5" selection-end-line="37" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="https://schemastore.azurewebsites.net/schemas/json/composer.json">
-      <provider selected="true" editor-type-id="httpFileEditor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.lock">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/socialite/src/SocialiteServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -484,13 +512,6 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/AdminController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="57" column="20" selection-start-line="57" selection-start-column="20" selection-end-line="57" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ApiUsersController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -509,18 +530,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="1132" column="20" selection-start-line="1132" selection-start-column="20" selection-end-line="1132" selection-end-column="20" />
-          <folding>
-            <element signature="e#94#101#0#PHP" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#37310#37379#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -658,9 +667,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/teste.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/teste.html" />
     <entry file="file://$PROJECT_DIR$/routes/web.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -677,13 +684,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vendor/crudbooster/type_components/file/info.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="40" column="160" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="160" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminCmsUsersController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -735,23 +735,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1151">
-          <caret line="270" column="22" selection-start-line="270" selection-start-column="22" selection-end-line="270" selection-end-column="22" />
-          <folding>
-            <element signature="e#40#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/helpers/CRUDBooster.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="1047" selection-start-line="1047" selection-end-line="1057" selection-end-column="9" />
-          <folding>
-            <element signature="e#54#64#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="195">
+          <caret line="40" column="160" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="160" />
         </state>
       </provider>
     </entry>
@@ -759,6 +746,59 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-20.log">
+      <provider selected="true" editor-type-id="LogFileEditorProvider">
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-21.log" />
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="1611" column="54" selection-start-line="1611" selection-start-column="54" selection-end-line="1611" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#59193#61358#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/AdminController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="84" column="30" selection-start-line="84" selection-start-column="30" selection-end-line="84" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/helpers/CRUDBooster.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="233" column="24" selection-start-line="233" selection-start-column="17" selection-end-line="233" selection-end-column="24" />
+          <folding>
+            <element signature="e#54#64#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
+          <folding>
+            <element signature="e#40#82#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

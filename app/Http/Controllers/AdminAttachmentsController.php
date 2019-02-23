@@ -11,7 +11,6 @@
 	class AdminAttachmentsController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
-
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
 			$this->limit = "20";
