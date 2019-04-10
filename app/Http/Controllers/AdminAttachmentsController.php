@@ -8,9 +8,10 @@
 	use DB;
 	use CRUDBooster;
 
-	class AdminAttachmentsController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminAttachmentsController extends CustomController {
 
 	    public function cbInit() {
+            $this->uuid_field = true;
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "id";
 			$this->limit = "20";
@@ -241,9 +242,6 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $query->where($this->table.'.owner_id',$me->owner_id);
-
             if (CRUDBooster::isSuperadmin())
                 $this->seedAttachments();
 	    }
@@ -267,9 +265,6 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
-            $postdata[$this->primary_key] = Uuid::uuid4();
 
             foreach ($this->data_inputan as $ro) {
                 if($ro['type']=='file'){

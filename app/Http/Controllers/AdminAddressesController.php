@@ -1,11 +1,10 @@
 <?php namespace App\Http\Controllers;
 
-	use crocodicstudio\crudbooster\helpers\CRUDBooster;
     use Session;
 	use Request;
 	use DB;
 
-	class AdminAddressesController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminAddressesController extends CustomController {
 
 	    public function cbInit() {
 
@@ -30,6 +29,7 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
+
 			$this->col[] = ["label"=>"Nome","name"=>"partner_id","join"=>"partners,name"];
 //			$this->col[] = ["label"=>"Padrão","name"=>"default"];
 			$this->col[] = ["label"=>"Logradouro","name"=>"street"];
@@ -245,10 +245,9 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $query->where('addresses.owner_id',$me->owner_id);
 
-	    }
+
+        }
 
 	    /*
 	    | ---------------------------------------------------------------------- 
@@ -269,8 +268,6 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
 	    }
 
 	    /* 

@@ -1,20 +1,19 @@
 <?php namespace App\Http\Controllers;
 
-	use Ramsey\Uuid\Uuid;
     use Session;
 	use Request;
 	use DB;
 	use CRUDBooster;
 
-	class AdminProductsController extends CustomController {
+	class AdminOrdersController extends CustomController {
 
 	    public function cbInit() {
             $this->uuid_field = true;
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "name";
+			$this->title_field = "id";
 			$this->limit = "20";
-			$this->orderby = "id,desc";
+			$this->orderby = "cod,desc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -27,43 +26,49 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "products";
+			$this->table = "orders";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Código","name"=>"cod"];
-			$this->col[] = ["label"=>"Nome","name"=>"name"];
-			$this->col[] = ["label"=>"Descrição","name"=>"description"];
+//			$this->col[] = ["label"=>"ID","name"=>"id"];
+			$this->col[] = ["label"=>"Cod","name"=>"cod"];
+			$this->col[] = ["label"=>"Tipo de Ordem","name"=>"order_type_id","join"=>"order_types,type"];
+			$this->col[] = ["label"=>"Parceiro","name"=>"partner_id","join"=>"partners,name"];
+            $this->col[] = ["label"=>"Total","name"=>"total","callback_php"=>'(new \NumberFormatter(config(\'app.locale\'), \NumberFormatter::CURRENCY))->format([total])'];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Código','name'=>'cod','type'=>'text','width'=>'col-sm-10','readonly'=>false];
-			$this->form[] = ['label'=>'Nome','name'=>'name','type'=>'text','validation'=>'required|min:3|max:70','width'=>'col-sm-10'];
-            $this->form[] = ['label'=>'Descrição','name'=>'description','type'=>'textarea','width'=>'col-sm-10'];
+//			$this->form[] = ['label'=>'Cod','name'=>'cod','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>'Tipo de Ordem','name'=>'order_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'order_types,type'];
+			$this->form[] = ['label'=>'Parceiro','name'=>'partner_id','type'=>'select2','validation'=>'required','width'=>'col-sm-10','datatable'=>'partners,name'];
+			$this->form[] = ['label'=>'Descrição','name'=>'description','type'=>'textarea','validation'=>'string|min:5|max:5000','width'=>'col-sm-10'];
 
 
             $columns = [];
             $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
-            $columns[] = ['label'=>'Código','name'=>'code','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10','required'=>true];
-            $columns[] = ['label'=>'Tipo de Código','name'=>'code_type_id','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'code_types,type','required'=>true];
-            $this->form[] = ['label'=>'Códigos','name'=>'codes_child','type'=>'child',
-                'columns'=>$columns,'table'=>'product_codes','foreign_key'=>'product_id'];
+            $columns[] = ['label'=>'Produto','name'=>'product_id','type'=>'select','datatable'=>'products,name','validation'=>'required|integer|min:0','width'=>'col-sm-10','required'=>true];
+//            $columns[] = ['label'=>'Produto','name'=>'product_id','type'=>'datamodal','datamodal_table'=>'products','datamodal_columns'=>'name','required'=>true];
+            $columns[] = ['label'=>'Quantidade','name'=>'quantity','type'=>'number','validation'=>'required|min:1|max:255','required'=>true];
+            $columns[] = ['label'=>'Preço','name'=>'price','type'=>'number','validation'=>'required|min:1|max:255','required'=>true];
+            $columns[] = ['label'=>'Sub Total','name'=>'sub_total','type'=>'number','validation'=>'required|min:1|max:255','required'=>true,'readonly'=>true,'formula'=>"[price] * [quantity]"];
 
-            $columns = [];
-            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
-            $columns[] = ['label'=>'Preço','name'=>'price','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10','required'=>true];
-            $columns[] = ['label'=>'Tipo de Preço','name'=>'price_type_id','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'price_types,type','required'=>true];
-            $this->form[] = ['label'=>'Preços','name'=>'prices_child','type'=>'child',
-                'columns'=>$columns,'table'=>'product_prices','foreign_key'=>'product_id'];
+            $this->form[] = ['label'=>'Itens','name'=>'order_details_child','type'=>'child',
+                'columns'=>$columns,'table'=>'order_details','foreign_key'=>'order_id'];
 
+            $this->form[] = ['label'=>'Total','name'=>'total','type'=>'money','validation'=>'required|integer|min:0','width'=>'col-sm-10','readonly'=>true];
 
-            # END FORM DO NOT REMOVE THIS LINE
+			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nome','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Você pode digitar somente letras'];
+			//$this->form[] = ["label"=>"Cod","name"=>"cod","type"=>"number","required"=>TRUE,"validation"=>"required|integer|min:0"];
+			//$this->form[] = ["label"=>"Owner Id","name"=>"owner_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"owner,id"];
+			//$this->form[] = ["label"=>"Order Type Id","name"=>"order_type_id","type"=>"select2","required"=>TRUE,"validation"=>"required|integer|min:0","datatable"=>"order_type,id"];
+			//$this->form[] = ["label"=>"Partner Id","name"=>"partner_id","type"=>"select2","required"=>TRUE,"validation"=>"required|min:1|max:255","datatable"=>"partner,id"];
+			//$this->form[] = ["label"=>"Description","name"=>"description","type"=>"textarea","required"=>TRUE,"validation"=>"required|string|min:5|max:5000"];
+			//$this->form[] = ["label"=>"Total","name"=>"total","type"=>"money","required"=>TRUE,"validation"=>"required|integer|min:0"];
 			# OLD END FORM
 
 			/* 
@@ -163,7 +168,20 @@
 	        | $this->script_js = "function() { ... }";
 	        |
 	        */
-	        $this->script_js = NULL;
+	        $this->script_js = "
+	            $(function(){
+	                setInterval(function(){
+	                    var total = 0;
+                        $('#table-itens tbody .sub_total').each(function(){
+                            var amount = parseInt($(this).text());
+                            total += amount;
+                        })
+                        $('#total').val(total);
+                        	                    
+	                }, 500);
+	                
+	            })
+	        ";
 
 
             /*
@@ -251,7 +269,7 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
- 	    }
+	    }
 
 	    /*
 	    | ---------------------------------------------------------------------- 
@@ -272,7 +290,7 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
- 	    }
+	    }
 
 	    /* 
 	    | ---------------------------------------------------------------------- 

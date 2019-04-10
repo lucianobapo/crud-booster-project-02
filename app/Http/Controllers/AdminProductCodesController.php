@@ -259,7 +259,7 @@
 	        //Your code here
             $me = CRUDBooster::me();
             if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
-            $postdata[$this->primary_key] = Uuid::uuid4();
+//            $postdata[$this->primary_key] = Uuid::uuid4();
 
 	    }
 

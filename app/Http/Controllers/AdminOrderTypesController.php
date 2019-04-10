@@ -1,18 +1,16 @@
 <?php namespace App\Http\Controllers;
 
-	use Ramsey\Uuid\Uuid;
-    use Session;
+	use Session;
 	use Request;
 	use DB;
 	use CRUDBooster;
 
-	class AdminProductsController extends CustomController {
+	class AdminOrderTypesController extends \crocodicstudio\crudbooster\controllers\CBController {
 
 	    public function cbInit() {
-            $this->uuid_field = true;
 
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
-			$this->title_field = "name";
+			$this->title_field = "id";
 			$this->limit = "20";
 			$this->orderby = "id,desc";
 			$this->global_privilege = false;
@@ -27,43 +25,22 @@
 			$this->button_filter = true;
 			$this->button_import = false;
 			$this->button_export = false;
-			$this->table = "products";
+			$this->table = "order_types";
 			# END CONFIGURATION DO NOT REMOVE THIS LINE
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Código","name"=>"cod"];
-			$this->col[] = ["label"=>"Nome","name"=>"name"];
-			$this->col[] = ["label"=>"Descrição","name"=>"description"];
+			$this->col[] = ["label"=>"Tipo","name"=>"type"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Código','name'=>'cod','type'=>'text','width'=>'col-sm-10','readonly'=>false];
-			$this->form[] = ['label'=>'Nome','name'=>'name','type'=>'text','validation'=>'required|min:3|max:70','width'=>'col-sm-10'];
-            $this->form[] = ['label'=>'Descrição','name'=>'description','type'=>'textarea','width'=>'col-sm-10'];
-
-
-            $columns = [];
-            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
-            $columns[] = ['label'=>'Código','name'=>'code','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10','required'=>true];
-            $columns[] = ['label'=>'Tipo de Código','name'=>'code_type_id','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'code_types,type','required'=>true];
-            $this->form[] = ['label'=>'Códigos','name'=>'codes_child','type'=>'child',
-                'columns'=>$columns,'table'=>'product_codes','foreign_key'=>'product_id'];
-
-            $columns = [];
-            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
-            $columns[] = ['label'=>'Preço','name'=>'price','type'=>'number','validation'=>'required|integer|min:0','width'=>'col-sm-10','required'=>true];
-            $columns[] = ['label'=>'Tipo de Preço','name'=>'price_type_id','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'price_types,type','required'=>true];
-            $this->form[] = ['label'=>'Preços','name'=>'prices_child','type'=>'child',
-                'columns'=>$columns,'table'=>'product_prices','foreign_key'=>'product_id'];
-
-
-            # END FORM DO NOT REMOVE THIS LINE
+			$this->form[] = ['label'=>'Tipo','name'=>'type','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10'];
+			# END FORM DO NOT REMOVE THIS LINE
 
 			# OLD START FORM
 			//$this->form = [];
-			//$this->form[] = ['label'=>'Nome','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Você pode digitar somente letras'];
+			//$this->form[] = ["label"=>"Type","name"=>"type","type"=>"text","required"=>TRUE,"validation"=>"required|min:1|max:255"];
 			# OLD END FORM
 
 			/* 
@@ -251,7 +228,8 @@
 	    */
 	    public function hook_query_index(&$query) {
 	        //Your code here
- 	    }
+	            
+	    }
 
 	    /*
 	    | ---------------------------------------------------------------------- 
@@ -272,7 +250,8 @@
 	    */
 	    public function hook_before_add(&$postdata) {        
 	        //Your code here
- 	    }
+
+	    }
 
 	    /* 
 	    | ---------------------------------------------------------------------- 
