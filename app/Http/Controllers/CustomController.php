@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 use CB;
+use crocodicstudio\crudbooster\controllers\LogsController;
 use CRUDBooster;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Cache;
@@ -1197,8 +1198,12 @@ class CustomController extends \crocodicstudio\crudbooster\controllers\CBControl
         $lastInsertId = $id = DB::table($this->table)->insertGetId($this->arr);
 
         //fix bug if primary key is uuid
-        if($this->arr[$this->primary_key]!=$id)
-            $id = $this->arr[$this->primary_key];
+        if (!is_null($this->uuid_field))
+            if($this->uuid_field===true)
+                $id = $this->arr[$this->primary_key];
+//            else
+//                $id = $this->arr[$this->uuid_field];
+
 
         //Looping Data Input Again After Insert
         foreach ($this->data_inputan as $ro) {

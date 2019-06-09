@@ -2,22 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/crud-booster-project-02.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/crud-booster-project-02.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminAddressesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminCostCentersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminOwnersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminOwnersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,14 +19,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CustomController.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1498">
-              <caret line="1425" lean-forward="true" selection-start-line="1425" selection-end-line="1425" />
+            <state relative-caret-position="173">
+              <caret line="373" column="24" selection-start-line="373" selection-start-column="24" selection-end-line="373" selection-end-column="24" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#50386#51427#0#PHP" />
-                <element signature="e#51441#52855#0#PHP" />
+                <element signature="e#43#94#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="e#40#91#0#PHP" expanded="true" />
+                <element signature="e#134#19743#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -48,7 +47,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>upload</find>
       <find>'upload'</find>
       <find>uploads</find>
       <find>auth</find>
@@ -78,6 +76,7 @@
       <find>-&gt;insert</find>
       <find>created_at</find>
       <find>updated_at</find>
+      <find>LogsController</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -117,7 +116,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_03_01_015137_create_orders.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductCodesController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_03_01_020821_create_order_details.php" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-03-08.log" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-03-18.log" />
@@ -134,9 +132,10 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminAttachmentsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminContactsController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminOrdersController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" />
         <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CustomController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" />
       </list>
     </option>
   </component>
@@ -259,10 +258,10 @@
       <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="18" />
     <option name="y" value="27" />
-    <option name="width" value="1223" />
+    <option name="width" value="1213" />
     <option name="height" value="693" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -271,7 +270,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,14 +316,17 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Code/laravel511" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -381,12 +382,17 @@
       <workItem from="1553045489815" duration="4579000" />
       <workItem from="1553200426896" duration="11024000" />
       <workItem from="1553541619573" duration="75811000" />
-      <workItem from="1554727048824" duration="7824000" />
+      <workItem from="1554727048824" duration="9545000" />
+      <workItem from="1555773632191" duration="2046000" />
+      <workItem from="1556324244586" duration="2419000" />
+      <workItem from="1556805444489" duration="2867000" />
+      <workItem from="1557191317610" duration="113000" />
+      <workItem from="1557266976239" duration="15000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="410419000" />
+    <option name="totallyTimeSpent" value="419600000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -398,11 +404,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="27" width="1241" height="693" extended-state="7" />
-    <editor active="true" />
+    <frame x="52" y="27" width="1314" height="741" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3913824" weight="0.39414227" />
-      <window_info id="Structure" order="1" sideWeight="0.6086176" side_tool="true" weight="0.39414227" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3872549" visible="true" weight="0.32492113" />
+      <window_info id="Structure" order="1" sideWeight="0.6127451" side_tool="true" visible="true" weight="0.32492113" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -413,10 +418,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32854578" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32561985" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.27468583" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.9504132" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -489,23 +494,7 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/FileController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="217" selection-start-line="217" selection-end-line="222" selection-end-column="5" />
-          <folding>
-            <element signature="e#39#67#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-20.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="165">
-          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-20.log" />
     <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-02-21.log" />
     <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/AdminController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -596,21 +585,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="2621" column="20" selection-start-line="2621" selection-start-column="20" selection-end-line="2621" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-03-08.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-03-18.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-183" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-03-08.log" />
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-03-18.log" />
     <entry file="file://$PROJECT_DIR$/vendor/fzaninotto/faker/src/Faker/Generator.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="115">
@@ -654,18 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="51" column="54" lean-forward="true" selection-start-line="51" selection-start-column="54" selection-end-line="51" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3907">
-          <caret line="348" column="92" selection-start-line="348" selection-start-column="92" selection-end-line="348" selection-end-column="92" />
-          <folding>
-            <element signature="e#197#927#0#PHP" />
-            <element signature="e#936#1729#0#PHP" />
-            <element signature="e#1738#2548#0#PHP" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -803,33 +767,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="72" column="37" lean-forward="true" selection-start-line="71" selection-start-column="34" selection-end-line="72" selection-end-column="37" />
-          <folding>
-            <element signature="e#40#91#0#PHP" expanded="true" />
-            <element signature="e#264#994#0#PHP" />
-            <element signature="e#1003#1796#0#PHP" />
-            <element signature="e#1805#2615#0#PHP" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -843,20 +780,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-04-10.log">
-      <provider selected="true" editor-type-id="LogFileEditorProvider">
-        <state relative-caret-position="-864" />
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-04-10.log" />
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Query/Builder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="2621" column="20" selection-start-line="2621" selection-start-column="20" selection-end-line="2621" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/storage/logs/laravel-2019-04-20.log" />
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CustomController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1498">
-          <caret line="1425" lean-forward="true" selection-start-line="1425" selection-end-line="1425" />
+        <state relative-caret-position="101">
+          <caret line="1199" column="40" selection-start-line="1199" selection-start-column="40" selection-end-line="1199" selection-end-column="40" />
           <folding>
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#50386#51427#0#PHP" />
-            <element signature="e#51441#52855#0#PHP" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="16" column="35" selection-start-line="16" selection-start-column="35" selection-end-line="16" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartners14Controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="e#40#91#0#PHP" expanded="true" />
+            <element signature="e#134#19743#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="21" column="51" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="51" />
         </state>
       </provider>
     </entry>

@@ -14,7 +14,7 @@
 			# START CONFIGURATION DO NOT REMOVE THIS LINE
 			$this->title_field = "name";
 			$this->limit = "20";
-			$this->orderby = "id,desc";
+			$this->orderby = "cod,asc";
 			$this->global_privilege = false;
 			$this->button_table_action = true;
 			$this->button_bulk_action = true;
@@ -34,7 +34,7 @@
 			$this->col = [];
 			$this->col[] = ["label"=>"Código","name"=>"cod"];
 			$this->col[] = ["label"=>"Nome","name"=>"name"];
-			$this->col[] = ["label"=>"Descrição","name"=>"description"];
+//			$this->col[] = ["label"=>"Descrição","name"=>"description"];
 			# END COLUMNS DO NOT REMOVE THIS LINE
 
 			# START FORM DO NOT REMOVE THIS LINE

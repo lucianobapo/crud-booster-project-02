@@ -1,11 +1,12 @@
 <?php namespace App\Http\Controllers;
 
+    use crocodicstudio\crudbooster\helpers\CRUDBooster;
 	use Session;
 	use Request;
 	use DB;
-	use CRUDBooster;
 
-	class AdminPartnersController extends \crocodicstudio\crudbooster\controllers\CBController {
+	class AdminPartnersController extends CustomController {
+
         public static function showDates($row){
             $ll = DB::select(
                 'Select dates.date, date_types.type  FROM dates 
@@ -69,6 +70,7 @@
 
 
         public function cbInit() {
+            $this->uuid_field = true;
 
             # START CONFIGURATION DO NOT REMOVE THIS LINE
             $this->title_field = "name";
@@ -109,24 +111,28 @@
             $this->form[] = ['label'=>'Tanque','name'=>'cost_center_id','type'=>'select2','width'=>'col-sm-10','datatable'=>'cost_centers,name',"datatable_format"=>"cod,' - ',name"];
 
             $columns = [];
-            $columns[] = ['label'=>'Data','name'=>'date','type'=>'date','validation'=>'required|date','required'=>true];
+            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
+            $columns[] = ['label'=>'Data','name'=>'date','type'=>'date','required'=>true];
             $columns[] = ['label'=>'Tipo de Data','name'=>'date_type_id','type'=>'select','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'date_types,type','required'=>true];
             $this->form[] = ['label'=>'Datas','name'=>'dates_child','type'=>'child',
                 'columns'=>$columns,'table'=>'dates','foreign_key'=>'partner_id'];
 
             $columns = [];
+            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
             $columns[] = ['label'=>'Número do Documento','name'=>'document_number','type'=>'text','validation'=>'required|min:3|max:70','required'=>true];
             $columns[] = ['label'=>'Tipo do Documento','name'=>'document_type_id','type'=>'select','datatable'=>'document_types,type','required'=>true];
             $this->form[] = ['label'=>'Documentos','name'=>'documents_child','type'=>'child',
                 'columns'=>$columns,'table'=>'documents','foreign_key'=>'partner_id'];
 
             $columns = [];
+            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
             $columns[] = ['label'=>'Contato','name'=>'contact','type'=>'text','validation'=>'required|min:3|max:70','required'=>true];
             $columns[] = ['label'=>'Tipo do Contato','name'=>'contact_type_id','type'=>'select','datatable'=>'contact_types,type','required'=>true];
             $this->form[] = ['label'=>'Contatos','name'=>'contacts_child','type'=>'child',
                 'columns'=>$columns,'table'=>'contacts','foreign_key'=>'partner_id'];
 
             $columns = [];
+            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
             $columns[] = ['label'=>'Logradouro','name'=>'street','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10','required'=>true];
             $columns[] = ['label'=>'CEP','name'=>'postal_code','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
             $columns[] = ['label'=>'Bairro','name'=>'district','type'=>'text','validation'=>'min:1|max:255','width'=>'col-sm-10'];
@@ -139,6 +145,7 @@
 
 
             $columns = [];
+            $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
             $columns[] = ['label'=>'Agência','name'=>'agency_number','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10','required'=>true];
             $columns[] = ['label'=>'Conta','name'=>'account_number','type'=>'text','validation'=>'required|min:1|max:255','width'=>'col-sm-10','required'=>true];
             $columns[] = ['label'=>'Tipo de Conta','name'=>'account_type_id','type'=>'select','validation'=>'required|min:1|max:255','width'=>'col-sm-10','datatable'=>'account_types,type','required'=>true];
@@ -345,8 +352,6 @@
         */
         public function hook_query_index(&$query) {
             //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $query->where($this->table.'.owner_id',$me->owner_id);
         }
 
         /*
@@ -368,9 +373,6 @@
         */
         public function hook_before_add(&$postdata) {
             //Your code here
-            $me = CRUDBooster::me();
-            if(!empty($me->owner_id)) $postdata['owner_id'] = $me->owner_id;
-            $postdata[$this->primary_key] = Uuid::uuid4();
 
         }
 
