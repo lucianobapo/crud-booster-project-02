@@ -108,7 +108,7 @@
             $this->form = [];
             $this->form[] = ['label'=>'Nome','name'=>'name','type'=>'text','validation'=>'required|string|min:3|max:70','width'=>'col-sm-10','placeholder'=>'Você pode digitar somente letras'];
             $this->form[] = ['label'=>'Tipo de Cadastro','name'=>'partner_type_id','type'=>'select2','validation'=>'required|integer|min:0','width'=>'col-sm-10','datatable'=>'partner_types,type'];
-            $this->form[] = ['label'=>'Tanque','name'=>'cost_center_id','type'=>'select2','width'=>'col-sm-10','datatable'=>'cost_centers,name',"datatable_format"=>"cod,' - ',name"];
+//            $this->form[] = ['label'=>'Tanque','name'=>'cost_center_id','type'=>'select2','width'=>'col-sm-10','datatable'=>'cost_centers,name',"datatable_format"=>"cod,' - ',name"];
 
             $columns = [];
             $columns[] = ["showInDetail"=>false,"name"=>"owner_id","type"=>"hidden","value"=>CRUDBooster::me()->owner_id];
