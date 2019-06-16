@@ -97,7 +97,7 @@
             $this->col[] = ["label"=>"Matrícula","name"=>"id","callback_php"=>'App\Http\Controllers\AdminPartners14Controller::showMatricula($row)'];
             $this->col[] = ["label"=>"Nome","name"=>"name"];
             $this->col[] = ["label"=>"Tipo de Cadastro","name"=>"partner_type_id","join"=>"partner_types,type"];
-            $this->col[] = ["label"=>"Tanque","name"=>"cost_center_id","join"=>"cost_centers,name","callback_php"=>'($row->cost_centers_cod." - ".$row->cost_centers_name)'];
+//            $this->col[] = ["label"=>"Tanque","name"=>"cost_center_id","join"=>"cost_centers,name","callback_php"=>'($row->cost_centers_cod." - ".$row->cost_centers_name)'];
             $this->col[] = ["label"=>"Datas","name"=>"id","callback_php"=>'App\Http\Controllers\AdminPartners14Controller::showDates($row)'];
 //            $this->col[] = ["label"=>"Documentos","name"=>"id","callback_php"=>'App\Http\Controllers\AdminPartners14Controller::showDocuments($row)'];
 

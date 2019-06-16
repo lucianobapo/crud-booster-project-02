@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="856f4d38-1001-4451-bd34-c410d0960008" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +19,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="114" column="46" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
+            <state relative-caret-position="79">
+              <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
               <folding>
                 <element signature="e#43#94#0#PHP" expanded="true" />
               </folding>
@@ -29,29 +29,14 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/.env">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/default/type_components/child/component.blade.php">
+        <entry file="file://$PROJECT_DIR$/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="231">
-              <caret line="49" column="28" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-            </state>
+            <state relative-caret-position="-315" />
           </provider>
         </entry>
       </file>
@@ -97,7 +82,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_02_07_134330_create_dates.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_05_221636_create_product_prices.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_04_211434_create_contacts.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_02_05_002519_create_addresses.php" />
@@ -108,7 +92,6 @@
         <option value="$PROJECT_DIR$/resources/views/vendor/crudbooster/type_components/file/info.json" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-12.log" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/storage/logs/laravel-2019-02-13.log" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminCmsUsersController.php" />
         <option value="$PROJECT_DIR$/config/services.php" />
@@ -144,10 +127,12 @@
         <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/controllers/CBController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CustomController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminProductsController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/default/type_components/child/component.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php" />
+        <option value="$PROJECT_DIR$/config/database.php" />
+        <option value="$PROJECT_DIR$/.env" />
       </list>
     </option>
   </component>
@@ -279,7 +264,7 @@
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="18" />
     <option name="y" value="27" />
-    <option name="width" value="1213" />
+    <option name="width" value="1223" />
     <option name="height" value="693" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -288,7 +273,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -310,15 +294,7 @@
             <path>
               <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
               <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
-              <item name="crud-booster-project-02" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="crud-booster-project-02" type="b2602c69:ProjectViewProjectNode" />
@@ -335,12 +311,13 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="/media/luciano/303dc6eb-7a99-474f-9807-1ab6cd83062d/home/luciano/configs" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
@@ -406,7 +383,8 @@
       <workItem from="1556805444489" duration="2867000" />
       <workItem from="1557191317610" duration="113000" />
       <workItem from="1557266976239" duration="15000" />
-      <workItem from="1560045892802" duration="8960000" />
+      <workItem from="1560045892802" duration="9720000" />
+      <workItem from="1560722982289" duration="5630000" />
     </task>
     <task id="LOCAL-00001" summary="cmt">
       <created>1560046152065</created>
@@ -429,11 +407,18 @@
       <option name="project" value="LOCAL" />
       <updated>1560094411812</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="cmt">
+      <created>1560116635216</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1560116635216</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="428560000" />
+    <option name="totallyTimeSpent" value="434950000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -447,8 +432,8 @@
   <component name="ToolWindowManager">
     <frame x="52" y="27" width="1314" height="741" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.8137255" visible="true" weight="0.32492113" />
-      <window_info id="Structure" order="1" sideWeight="0.18627451" side_tool="true" visible="true" weight="0.32492113" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.71747214" weight="0.33044165" />
+      <window_info id="Structure" order="1" sideWeight="0.2825279" side_tool="true" weight="0.33044165" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -459,18 +444,18 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32854578" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32561985" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32561985" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" weight="0.9504132" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.5553719" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Database" order="3" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.3913824" visible="true" weight="0.39414227" />
-      <window_info id="Structure" order="1" sideWeight="0.6086176" side_tool="true" weight="0.39414227" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.71747214" visible="true" weight="0.33044165" />
+      <window_info id="Structure" order="1" sideWeight="0.2825279" side_tool="true" visible="true" weight="0.33044165" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -481,10 +466,10 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32854578" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32854578" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32561985" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5004205" side_tool="true" weight="0.19677997" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.27468583" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4995795" visible="true" weight="0.5553719" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -541,18 +526,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="cmt" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_11_213504_create_posts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="29" selection-start-line="29" selection-end-line="32" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_09_005909_create_banks.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-45" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2019_02_11_182717_create_owners.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-45" />
@@ -865,16 +838,6 @@
     <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/default/type_components/date/component.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="114" column="46" selection-start-line="114" selection-start-column="46" selection-end-line="114" selection-end-column="46" />
-          <folding>
-            <element signature="e#43#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/crocodicstudio/crudbooster/src/views/default/type_components/child/component.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -888,6 +851,24 @@
           <caret line="17" column="48" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/AdminPartnersController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="79">
+          <caret line="100" column="43" selection-start-line="100" selection-start-column="43" selection-end-line="100" selection-end-column="43" />
+          <folding>
+            <element signature="e#43#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-315" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.env">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
