@@ -414,11 +414,12 @@
 
             foreach ($attachments as $attachment) {
 
-            	FFMpeg::fromDisk('local')
+            	$export = FFMpeg::fromDisk('local')
 				    ->open($attachment)
 				    ->getFrameFromSeconds(10)
-				    ->export()
-				    ->toDisk('thumnails')
+				    ->export();
+				dd($export);
+				$export->toDisk('thumnails')
 				    ->save('FrameAt10sec.png');
 
                 if(empty($this->firstAttachment($attachment))){
