@@ -177,6 +177,8 @@ return [
         App\Providers\RouteServiceProvider::class,
         crocodicstudio\crudbooster\CRUDBoosterServiceProvider::class,
 
+        Pbmedia\LaravelFFMpeg\FFMpegServiceProvider::class,
+
     ],
 
     /*
@@ -226,6 +228,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
+        'FFMpeg' => Pbmedia\LaravelFFMpeg\FFMpegFacade::class,
     ],
 
 ];

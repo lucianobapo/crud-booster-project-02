@@ -413,6 +413,14 @@
 
             foreach ($attachments as $attachment) {
 
+logger($attachment);
+            	/*FFMpeg::fromDisk('videos')
+				    ->open('steve_howe.mp4')
+				    ->getFrameFromSeconds(10)
+				    ->export()
+				    ->toDisk('thumnails')
+				    ->save('FrameAt10sec.png');*/
+
                 if(empty($this->firstAttachment($attachment))){
                     $this->insertAttachment($attachment);
                 }
