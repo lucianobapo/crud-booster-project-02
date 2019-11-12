@@ -7,6 +7,7 @@
 	use Request;
 	use DB;
 	use CRUDBooster;
+	use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
 
 	class AdminAttachmentsController extends CustomController {
 
