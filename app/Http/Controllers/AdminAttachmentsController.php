@@ -410,9 +410,17 @@
 
         private function seedAttachments()
         {
+        	//var_dump(is_dir('/usr/localbin'));
+        	//var_dump(is_file('/usr/localbin/ffmpeg'));
+  			//var_dump(is_executable('/var/www/ffmpeg'));
+        	//var_dump(exec('/var/www/ffmpeg'));
+        	dd(exec('/usr/localbin/ffprobe -help'));
+        	//dd(exec('ls -laS /usr/localbin'));
+        	//dd('');
             $attachments = Storage::allFiles($this->table);
 
             foreach ($attachments as $attachment) {
+
 
             	$export = FFMpeg::fromDisk('local')
 				    ->open($attachment)
