@@ -415,7 +415,6 @@
             $not_done = true;
 
             foreach ($attachments as $attachment) {
-
 				if($not_done && Storage::exists($attachment) && $this->checkFfmpeg()){
 					$video_opened = FFMpeg::fromDisk('local')
 				    ->open($attachment);
@@ -429,14 +428,14 @@
 					    ->export()
 						->toDisk('local')
 					    ->save($thumb_name);
-					    $not_done = false;
 
 					    if (Storage::exists($thumb_name)){
-					    	GlideImage::create($thumb_name)
+					    	GlideImage::create(Storage::path($thumb_name))
 								->modify(['w'=> 50, 'fit'=>'fill'])
-								->save($thumb_name);
+								->save(Storage::path($thumb_name));
 					    }
-					    
+
+					    $not_done = false;					    
 				    }		    
 				    
 				}
