@@ -492,7 +492,6 @@
         private function checkAttach($attachment)
         {
         	$extension = pathinfo(Storage::path($attachment), PATHINFO_EXTENSION);
-        	dd($extension);
         	return (Storage::exists($attachment) && $extension=='avi');
         }
     }
