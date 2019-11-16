@@ -34,7 +34,7 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Arquivo","name"=>"file"];
+			$this->col[] = ["label"=>"Arquivo".ini_get('upload_max_filesize'),"name"=>"file"];
 			$this->col[] = ["label"=>"Check Referer","name"=>"check_referer",'callback_php'=>'($row->check_referer?"Ativado":"Desativado")'];
 			$this->col[] = ["label"=>"Referers","name"=>"referers"];
 			$this->col[] = ["label"=>"Check Permissions","name"=>"check_permissions",'callback_php'=>'($row->check_permissions?"Ativado":"Desativado")'];
@@ -43,7 +43,7 @@
 
 			# START FORM DO NOT REMOVE THIS LINE
 			$this->form = [];
-			$this->form[] = ['label'=>'Arquivo','name'=>'file','type'=>'file','validation'=>'required','width'=>'col-sm-10'];
+			$this->form[] = ['label'=>"Arquivo (max size ".ini_get('upload_max_filesize').")",'name'=>'file','type'=>'file','validation'=>'required','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Check Referer','name'=>'check_referer','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|(Ativar - acesso somente dentro do site)'];
 			$this->form[] = ['label'=>'Referers','name'=>'referers','type'=>'text','width'=>'col-sm-10'];
 			$this->form[] = ['label'=>'Check Permissions','name'=>'check_permissions','type'=>'checkbox','width'=>'col-sm-10','dataenum'=>'1|(Ativar - acesso somente do grupo)'];
