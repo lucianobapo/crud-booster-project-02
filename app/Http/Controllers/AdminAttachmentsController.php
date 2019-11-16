@@ -412,6 +412,8 @@
         {
         	//var_dump(is_dir('/usr/localbin'));
         	//var_dump(is_file('/usr/localbin/ffmpeg'));
+  			var_dump(is_file('/usr/bin/ffmpeg'));
+  			var_dump(is_executable('/usr/bin/ffmpeg'));
   			//var_dump(is_executable('/var/www/ffmpeg'));
         	//var_dump(exec('/var/www/ffmpeg'));
         	dd(exec('/usr/localbin/ffprobe -help'));
