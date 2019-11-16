@@ -8,6 +8,7 @@
 	use DB;
 	use CRUDBooster;
 	use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
+	use Spatie\Glide\GlideImageFacade as GlideImage;
 
 	class AdminAttachmentsController extends CustomController {
 
@@ -34,7 +35,7 @@
 
 			# START COLUMNS DO NOT REMOVE THIS LINE
 			$this->col = [];
-			$this->col[] = ["label"=>"Arquivo".ini_get('upload_max_filesize'),"name"=>"file"];
+			$this->col[] = ["label"=>"Arquivo","name"=>"file"];
 			$this->col[] = ["label"=>"Check Referer","name"=>"check_referer",'callback_php'=>'($row->check_referer?"Ativado":"Desativado")'];
 			$this->col[] = ["label"=>"Referers","name"=>"referers"];
 			$this->col[] = ["label"=>"Check Permissions","name"=>"check_permissions",'callback_php'=>'($row->check_permissions?"Ativado":"Desativado")'];
@@ -420,12 +421,24 @@
 				    ->open($attachment);
 
 				    $durationInSeconds = $video_opened->getDurationInSeconds();
+				    $frame_sec_thumb = intdiv($durationInSeconds,10);
+				    $thumb_name = $attachment.'-thumb-'.$frame_sec_thumb.'.png';
 
-				    $video_opened->getFrameFromSeconds(intdiv($durationInSeconds,10))
-				    ->export()
-					->toDisk('thumnails')
-				    ->save($attachment.'-thumb01.png');
-				    $not_done = false;
+				    if (!Storage::exists($thumb_name)){
+						$video_opened->getFrameFromSeconds($frame_sec_thumb)
+					    ->export()
+						->toDisk('local')
+					    ->save($thumb_name);
+					    $not_done = false;
+
+					    if (Storage::exists($thumb_name)){
+					    	GlideImage::create($thumb_name)
+								->modify(['w'=> 50, 'fit'=>'fill'])
+								->save($thumb_name);
+					    }
+					    
+				    }		    
+				    
 				}
             	
 
