@@ -433,7 +433,7 @@
 
 					    if (Storage::exists($thumb_name)){
 					    	GlideImage::create(Storage::path($thumb_name))
-								->modify(['w'=> 150, 'fit'=>'fill'])
+								->modify(['w'=> 200,'h'=> 200, 'fit'=>'fill'])
 								->save($thumb_name_resized);
 							Storage::delete($thumb_name);
 					    } else logger('file not found for GlideImage: '.$thumb_name);
