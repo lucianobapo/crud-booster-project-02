@@ -415,7 +415,8 @@
             $not_done = true;
 
             foreach ($attachments as $attachment) {
-				if($not_done && Storage::exists($attachment) && $this->checkFfmpeg()){
+            	
+				if($not_done && $this->checkFfmpeg() && $this->checkAttach($attachment)){
 					$video_opened = FFMpeg::fromDisk('local')
 				    ->open($attachment);
 
@@ -486,5 +487,12 @@
             return (is_string($conf_ffmpeg) 
             	&& is_file($conf_ffmpeg) 
             	&& is_executable($conf_ffmpeg));
+        }
+
+        private function checkAttach($attachment)
+        {
+        	$extension = pathinfo(Storage::path($attachment), PATHINFO_EXTENSION);
+        	dd($extension);
+        	return (Storage::exists($attachment) && $extension=='avi');
         }
     }
