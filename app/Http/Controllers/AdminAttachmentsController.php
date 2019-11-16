@@ -423,9 +423,9 @@
 				    $durationInSeconds = $video_opened->getDurationInSeconds();
 				    $frame_sec_thumb = intdiv($durationInSeconds,10);
 				    $thumb_name = $attachment.'-thumb-'.$frame_sec_thumb.'.png';
-				    $thumb_name_resized = $attachment.'-thumb-'.$frame_sec_thumb.'-resized.png';
+				    $thumb_name_resized = Storage::path($thumb_name).'-resized.png';
 
-				    if (!Storage::exists($thumb_name)){
+				    if (!is_file($thumb_name_resized)){
 						$video_opened->getFrameFromSeconds($frame_sec_thumb)
 					    ->export()
 						->toDisk('local')
@@ -433,12 +433,13 @@
 
 					    if (Storage::exists($thumb_name)){
 					    	GlideImage::create(Storage::path($thumb_name))
-								->modify(['w'=> 50, 'fit'=>'fill'])
-								->save(Storage::path($thumb_name).'-resized.png');
+								->modify(['w'=> 150, 'fit'=>'fill'])
+								->save($thumb_name_resized);
+							Storage::delete($thumb_name);
 					    } else logger('file not found for GlideImage: '.$thumb_name);
 
 					    $not_done = false;					    
-				    } else logger('file already thumbed: '.$thumb_name);	    
+				    } else logger('file already thumbed: '.$thumb_name_resized);	    
 				    
 				}
             	
