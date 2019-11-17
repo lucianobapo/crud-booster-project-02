@@ -477,6 +477,7 @@
 
         private function createThumbnails($attachment)
         {
+        	
         	if (!$this->checkAttach($attachment)) {
         		logger('checkAttach failed: '.$attachment);
         		return null;
@@ -488,10 +489,10 @@
         	}
 
         	
-        	$thumb_path = storage_path('app/attachments/thumnails');
+        	$thumb_file = storage_path('app/attachments/thumnails/').pathinfo(Storage::path($attachment), PATHINFO_FILENAME).'.gif';
 
         	//if ($this->checkAttach($attachment))
-        	$this->build_video_thumbnail($attachment, $thumb_path);
+        	$this->build_video_thumbnail($attachment, $thumb_file);
 
 
         	/*
@@ -522,7 +523,7 @@
 			}*/
         }
 
-        public function build_video_thumbnail($attachment, $thumb_path) {
+        public function build_video_thumbnail($attachment, $thumb_file) {
 
 		    // Create a temp directory for building.
 		    if (!is_writable(sys_get_temp_dir())) {
@@ -530,7 +531,7 @@
 		    	return null;
 		    }
 		    $temp = sys_get_temp_dir() . "/build";
-		    mkdir($temp);
+		    if (!if_dir($temp)) mkdir($temp);
 		    if (!is_writable($temp)) {
 		    	logger('build dir is not writable: '.$temp);
 		    	return null;
@@ -605,7 +606,7 @@
 		        // Create a new GIF and save it.
 		        $gc = new GifCreator();
 		        $gc->create($frames, $durations, 0);
-		        file_put_contents($thumb_path, $gc->getGif());
+		        file_put_contents($thumb_file, $gc->getGif());
 
 		        // Remove all the temporary frames.
 		        foreach ($frames as $file) {
