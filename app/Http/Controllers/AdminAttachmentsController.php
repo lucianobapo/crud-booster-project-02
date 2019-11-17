@@ -525,7 +525,18 @@
         public function build_video_thumbnail($attachment, $thumb_path) {
 
 		    // Create a temp directory for building.
+		    if (!is_writable(sys_get_temp_dir())) {
+		    	logger('temp dir is not writable: '.sys_get_temp_dir());
+		    	return null;
+		    }
 		    $temp = sys_get_temp_dir() . "/build";
+		    mkdir($temp);
+		    if (!is_writable($temp)) {
+		    	logger('build dir is not writable: '.$temp);
+		    	return null;
+		    }
+		    
+		    	
 		    //$video_path = Storage::path($attachment);
 
 		    // Use FFProbe to get the duration of the video.
