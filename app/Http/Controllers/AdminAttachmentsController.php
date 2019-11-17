@@ -7,13 +7,13 @@
 	use Request;
 	use DB;
 	use CRUDBooster;
-	//use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
+	use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
 	//use Spatie\Glide\GlideImageFacade as GlideImage;
 
 	use Intervention\Image\ImageManagerStatic as Image;
 	use GifCreator\GifCreator;
-	use FFMpeg\FFprobe;
-	use FFMpeg\FFMpeg;
+	//use FFMpeg\FFprobe;
+	//use FFMpeg\FFMpeg;
 	use FFMpeg\Coordinate\TimeCode;
 
 	class AdminAttachmentsController extends CustomController {
@@ -528,12 +528,15 @@
 		    $temp = sys_get_temp_dir() . "/build";
 
 		    // Use FFProbe to get the duration of the video.
-		    $ffprobe = FFprobe::create();
+		    /*$ffprobe = FFprobe::create();
 		    $duration = floor($ffprobe
 		        ->format($video_path)
-		        ->get('duration'));
+		        ->get('duration'));*/
+		    $video_opened = FFMpeg::fromDisk('local')
+			    ->open($video_path);
+		    $duration = $video_opened->getDurationInSeconds();    
 
-		    // If we couldn't get the direction or it was zero, exit.
+		    // If we couldn't get the direction or it was zero, exit.		    
 		    if (empty($duration)) {
 		        return;
 		    }
