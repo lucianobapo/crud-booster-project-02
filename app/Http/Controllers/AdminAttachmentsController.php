@@ -8,7 +8,13 @@
 	use DB;
 	use CRUDBooster;
 	use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
-	use Spatie\Glide\GlideImageFacade as GlideImage;
+	//use Spatie\Glide\GlideImageFacade as GlideImage;
+
+	use Intervention\Image\ImageManagerStatic as Image;
+	use GifCreator\GifCreator;
+	//use FFMpeg\FFprobe;
+	//use FFMpeg\FFMpeg;
+	use FFMpeg\Coordinate\TimeCode;
 
 	class AdminAttachmentsController extends CustomController {
 
@@ -412,37 +418,9 @@
         private function seedAttachments()
         {
             $attachments = Storage::allFiles($this->table);
-            $not_done = true;
-
             foreach ($attachments as $attachment) {
-            	
-				if($not_done && $this->checkFfmpeg() && $this->checkAttach($attachment)){
-					$video_opened = FFMpeg::fromDisk('local')
-				    ->open($attachment);
 
-				    $durationInSeconds = $video_opened->getDurationInSeconds();
-				    $frame_sec_thumb = intdiv($durationInSeconds,10);
-				    $thumb_name = $attachment.'-thumb-'.$frame_sec_thumb.'.png';
-				    $thumb_name_resized = Storage::path($thumb_name).'-resized.png';
-
-				    if (!is_file($thumb_name_resized)){
-						$video_opened->getFrameFromSeconds($frame_sec_thumb)
-					    ->export()
-						->toDisk('local')
-					    ->save($thumb_name);
-
-					    if (Storage::exists($thumb_name)){
-					    	GlideImage::create(Storage::path($thumb_name))
-								->modify(['w'=> 200,'h'=> 200, 'fit'=>'fill'])
-								->save($thumb_name_resized);
-							Storage::delete($thumb_name);
-					    } else logger('file not found for GlideImage: '.$thumb_name);
-
-					    $not_done = false;					    
-				    } else logger('file already thumbed: '.$thumb_name_resized);	    
-				    
-				}
-            	
+            	$this->createThumbnails($attachment);            	
 
                 if(empty($this->firstAttachment($attachment))){
                     $this->insertAttachment($attachment);
@@ -496,4 +474,128 @@
         	$extension = pathinfo(Storage::path($attachment), PATHINFO_EXTENSION);
         	return (Storage::exists($attachment) && $extension=='avi');
         }
+
+        private function createThumbnails($attachment)
+        {
+        	if (!$this->checkAttach($attachment)) {
+        		logger('checkAttach failed: '.$attachment);
+        		return null;
+        	}
+        	
+        	if (!$this->checkFfmpeg()) {
+        		logger('checkFfmpeg failed');
+        		return null;
+        	}
+        	dd('passou');
+
+        	$video_path = Storage::path($attachment);
+        	$thumb_path = storage_path('app/attachments/thumnails');
+
+        	//if ($this->checkAttach($attachment))
+        	$this->build_video_thumbnail($video_path, $thumb_path);
+
+
+        	/*
+        	if($this->checkFfmpeg() && $this->checkAttach($attachment)){
+				$video_opened = FFMpeg::fromDisk('local')
+			    ->open($attachment);
+
+			    $durationInSeconds = $video_opened->getDurationInSeconds();
+			    $frame_sec_thumb = intdiv($durationInSeconds,10);
+			    $thumb_name = $attachment.'-thumb-'.$frame_sec_thumb.'.png';
+			    $thumb_name_resized = Storage::path($thumb_name).'-resized.png';
+
+			    if (!is_file($thumb_name_resized)){
+					$video_opened->getFrameFromSeconds($frame_sec_thumb)
+				    ->export()
+					->toDisk('local')
+				    ->save($thumb_name);
+
+				    if (Storage::exists($thumb_name)){
+				    	GlideImage::create(Storage::path($thumb_name))
+							->modify(['w'=> 200,'h'=> 200, 'fit'=>'fill'])
+							->save($thumb_name_resized);
+						Storage::delete($thumb_name);
+				    } else logger('file not found for GlideImage: '.$thumb_name);
+					    
+			    } else logger('file already thumbed: '.$thumb_name_resized);	    
+			    
+			}*/
+        }
+
+        public function build_video_thumbnail($video_path, $thumb_path) {
+
+		    // Create a temp directory for building.
+		    $temp = sys_get_temp_dir() . "/build";
+
+		    // Use FFProbe to get the duration of the video.
+		    $ffprobe = FFprobe::create();
+		    $duration = floor($ffprobe
+		        ->format($video_path)
+		        ->get('duration'));
+
+		    // If we couldn't get the direction or it was zero, exit.
+		    if (empty($duration)) {
+		        return;
+		    }
+
+		    // Create an FFMpeg instance and open the video.
+		    //$ffmpeg = FFMpeg::create();
+		    $video = $video_opened;
+
+		    // This array holds our "points" that we are going to extract from the
+		    // video. Each one represents a percentage into the video we will go in
+		    // extracitng a frame. 0%, 10%, 20% ..
+		    $points = range(0, 100, 10);
+
+		    // This will hold our finished frames.
+		    $frames = [];
+
+		    foreach ($points as $point) {
+
+		        // Point is a percent, so get the actual seconds into the video.
+		        $time_secs = floor($duration * ($point / 100));
+
+		        // Created a var to hold the point filename.
+		        $point_file = "$temp/$point.jpg";
+
+		        // Extract the frame.
+		        $frame = $video->frame(TimeCode::fromSeconds($time_secs));
+		        $frame->save($point_file);
+
+		        // If the frame was successfully extracted, resize it down to
+		        // 320x200 keeping aspect ratio.
+		        if (file_exists($point_file)) {
+		            $img = Image::make($point_file)->resize(300, 200, function ($constraint) {
+		                $constraint->aspectRatio();
+		                $constraint->upsize();
+		            });
+
+		            $img->save($point_file, 40);
+		            $img->destroy();
+		        }
+
+		        // If the resize was successful, add it to the frames array.
+		        if (file_exists($point_file)) {
+		            $frames[] = $point_file;
+		        }
+		    }
+
+		    // If we have frames that were successfully extracted.
+		    if (!empty($frames)) {
+
+		        // We show each frame for 100 ms.
+		        $durations = array_fill(0, count($frames), 100);
+
+		        // Create a new GIF and save it.
+		        $gc = new GifCreator();
+		        $gc->create($frames, $durations, 0);
+		        file_put_contents($thumb_path, $gc->getGif());
+
+		        // Remove all the temporary frames.
+		        foreach ($frames as $file) {
+		            unlink($file);
+		        }
+		    }
+		}
     }

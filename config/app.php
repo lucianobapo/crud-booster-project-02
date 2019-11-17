@@ -178,7 +178,7 @@ return [
         crocodicstudio\crudbooster\CRUDBoosterServiceProvider::class,
 
         Pbmedia\LaravelFFMpeg\FFMpegServiceProvider::class,
-        Spatie\Glide\GlideServiceProvider::class,
+        //Spatie\Glide\GlideServiceProvider::class,
 
     ],
 
@@ -230,7 +230,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'FFMpeg' => Pbmedia\LaravelFFMpeg\FFMpegFacade::class,
-        'GlideImage' => Spatie\Glide\GlideImageFacade::class,
+        //'GlideImage' => Spatie\Glide\GlideImageFacade::class,
     ],
 
 ];
