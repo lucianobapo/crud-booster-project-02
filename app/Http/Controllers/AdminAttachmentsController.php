@@ -7,7 +7,7 @@
 	use Request;
 	use DB;
 	use CRUDBooster;
-	use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
+	//use Pbmedia\LaravelFFMpeg\FFMpegFacade as FFMpeg;
 	//use Spatie\Glide\GlideImageFacade as GlideImage;
 
 	use Intervention\Image\ImageManagerStatic as Image;
