@@ -477,7 +477,6 @@
 
         private function createThumbnails($attachment)
         {
-        	
         	if (!$this->checkAttach($attachment)) {
         		logger('checkAttach failed: '.$attachment);
         		return null;
@@ -490,8 +489,9 @@
 
         	
         	$thumb_file = storage_path('app/attachments/thumnails/').pathinfo(Storage::path($attachment), PATHINFO_FILENAME).'.gif';
+        	$thumb_dir = pathinfo($thumb_file, PATHINFO_DIRNAME);
+        	if (!is_dir($thumb_dir)) mkdir($thumb_dir);        	
 
-        	//if ($this->checkAttach($attachment))
         	$this->build_video_thumbnail($attachment, $thumb_file);
 
 
