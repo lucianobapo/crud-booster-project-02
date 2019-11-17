@@ -12,8 +12,8 @@
 
 	use Intervention\Image\ImageManagerStatic as Image;
 	use GifCreator\GifCreator;
-	//use FFMpeg\FFprobe;
-	//use FFMpeg\FFMpeg;
+	use FFMpeg\FFprobe;
+	use FFMpeg\FFMpeg;
 	use FFMpeg\Coordinate\TimeCode;
 
 	class AdminAttachmentsController extends CustomController {
