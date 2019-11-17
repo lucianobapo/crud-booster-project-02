@@ -487,11 +487,11 @@
         		return null;
         	}
 
-        	$video_path = Storage::path($attachment);
+        	
         	$thumb_path = storage_path('app/attachments/thumnails');
 
         	//if ($this->checkAttach($attachment))
-        	$this->build_video_thumbnail($video_path, $thumb_path);
+        	$this->build_video_thumbnail($attachment, $thumb_path);
 
 
         	/*
@@ -522,10 +522,11 @@
 			}*/
         }
 
-        public function build_video_thumbnail($video_path, $thumb_path) {
+        public function build_video_thumbnail($attachment, $thumb_path) {
 
 		    // Create a temp directory for building.
 		    $temp = sys_get_temp_dir() . "/build";
+		    //$video_path = Storage::path($attachment);
 
 		    // Use FFProbe to get the duration of the video.
 		    /*$ffprobe = FFprobe::create();
@@ -533,17 +534,18 @@
 		        ->format($video_path)
 		        ->get('duration'));*/
 		    $video_opened = FFMpeg::fromDisk('local')
-			    ->open($video_path);
+			    ->open($attachment);
 		    $duration = $video_opened->getDurationInSeconds();    
 
 		    // If we couldn't get the direction or it was zero, exit.		    
 		    if (empty($duration)) {
-		        return;
+		    	logger('video duration empty: '.$duration);
+		        return null;
 		    }
 
 		    // Create an FFMpeg instance and open the video.
 		    //$ffmpeg = FFMpeg::create();
-		    $video = $video_opened;
+		    //$video = $video_opened;
 
 		    // This array holds our "points" that we are going to extract from the
 		    // video. Each one represents a percentage into the video we will go in
@@ -562,7 +564,7 @@
 		        $point_file = "$temp/$point.jpg";
 
 		        // Extract the frame.
-		        $frame = $video->frame(TimeCode::fromSeconds($time_secs));
+		        $frame = $video_opened->frame(TimeCode::fromSeconds($time_secs));
 		        $frame->save($point_file);
 
 		        // If the frame was successfully extracted, resize it down to
