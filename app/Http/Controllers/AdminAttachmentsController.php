@@ -492,7 +492,8 @@
         	$thumb_dir = pathinfo($thumb_file, PATHINFO_DIRNAME);
         	if (!is_dir($thumb_dir)) mkdir($thumb_dir);        	
 
-        	$this->build_video_thumbnail($attachment, $thumb_file);
+        	if (!is_file($thumb_file))
+        		$this->build_video_thumbnail($attachment, $thumb_file);
 
 
         	/*
@@ -610,7 +611,7 @@
 
 		        // Remove all the temporary frames.
 		        foreach ($frames as $file) {
-		            unlink($file);
+		            //unlink($file);
 		        }
 		    }
 		}
