@@ -531,7 +531,7 @@
 		    	return null;
 		    }
 		    $temp = sys_get_temp_dir() . "/build";
-		    if (!if_dir($temp)) mkdir($temp);
+		    if (!is_dir($temp)) mkdir($temp);
 		    if (!is_writable($temp)) {
 		    	logger('build dir is not writable: '.$temp);
 		    	return null;
