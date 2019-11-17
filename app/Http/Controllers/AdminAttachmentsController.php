@@ -486,7 +486,6 @@
         		logger('checkFfmpeg failed');
         		return null;
         	}
-        	dd('passou');
 
         	$video_path = Storage::path($attachment);
         	$thumb_path = storage_path('app/attachments/thumnails');
